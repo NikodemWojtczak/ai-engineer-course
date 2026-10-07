@@ -46,8 +46,9 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
 
 - Run it **top to bottom**; later parts reuse functions and the gateway log from earlier parts.
   To run it again, use *Kernel → Restart Kernel and Run All Cells*.
-- The notebook comes **without outputs**. The numbers quoted in the prose ("when we ran it…") come from the author's run
-  on 2026-10-07; yours will differ a little, because the model samples and prices change. The arguments never depend on an exact value.
+- The notebook comes **with the outputs of the author's run** against the real API (2026-10-07), so you can read it — answers,
+  tables and charts — without running it, on GitHub or in Jupyter. When you run it yourself the numbers will differ a little,
+  because the model samples and prices change; the arguments never depend on an exact value.
 - Three kinds of cells come back in every part:
   **🔮 Predict** — guess the result before running the next cell;
   **💥 Break it** — a working example is deliberately broken, then repaired;
@@ -76,11 +77,11 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
 ## What is in this repository
 
 ```
-notebooks/                 the notebooks (without outputs) and img/ with their diagrams
+notebooks/                 the notebooks (with the author's outputs) and img/ with their diagrams
 pyproject.toml, uv.lock    the pinned environment the notebooks were verified with; .python-version pins Python 3.12
 .env.example               template for your .env
 ```
 
 The notebooks are generated from sources kept in a separate repository, so edit them only for your own experiments
-and send corrections to the author. After you run a notebook, `git status` shows it as modified (the outputs);
-`git checkout -- notebooks/` restores the clean copy, and `git pull` brings new levels as they are published.
+and send corrections to the author. After you run a notebook, `git status` shows it as modified (your outputs replaced
+the author's); `git checkout -- notebooks/` restores the published copy, and `git pull` brings new levels as they are published.
