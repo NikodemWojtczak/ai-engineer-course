@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="204" viewBox="0 0 760 204" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker></defs>
+<rect width="760" height="204" fill="#fcfcfb"/>
+<text x="40" y="28" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle">A timestamp at the start: nothing can match</text>
+<rect x="40" y="42" width="96" height="36" rx="4" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="88.0" y="60" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">time 14:03:11</text>
+<rect x="140" y="42" width="116" height="36" rx="4" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="198.0" y="60" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">system prompt</text>
+<rect x="260" y="42" width="226" height="36" rx="4" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="373.0" y="60" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">handbook, 2,000 tokens</text>
+<rect x="490" y="42" width="86" height="36" rx="4" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="533.0" y="60" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">question</text>
+<text x="586" y="60" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle">0 cached</text>
+<text x="40" y="104" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle">Stable parts first, changing parts last</text>
+<rect x="40" y="118" width="116" height="36" rx="4" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="98.0" y="136" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">system prompt</text>
+<rect x="160" y="118" width="226" height="36" rx="4" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="273.0" y="136" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">handbook, 2,000 tokens</text>
+<rect x="390" y="118" width="86" height="36" rx="4" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="433.0" y="136" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">question</text>
+<rect x="480" y="118" width="96" height="36" rx="4" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="528.0" y="136" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">time 14:03:11</text>
+<text x="586" y="136" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle">the prefix is cached</text>
+<rect x="40" y="176" width="14" height="14" rx="3" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="60" y="183" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle">cached: identical to the start of an earlier request</text>
+<rect x="370" y="176" width="14" height="14" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="390" y="183" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle">fresh: from the first difference onwards</text>
+</svg>

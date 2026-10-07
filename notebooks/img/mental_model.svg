@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="268" viewBox="0 0 760 268" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker></defs>
+<rect width="760" height="268" fill="#fcfcfb"/>
+<text x="130" y="24" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle">a list of messages</text>
+<rect x="40" y="42" width="180" height="22" rx="4" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="130" y="53.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">system</text>
+<rect x="40" y="70" width="180" height="22" rx="4" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="130" y="81.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">user</text>
+<rect x="40" y="98" width="180" height="22" rx="4" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="130" y="109.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">assistant</text>
+<rect x="40" y="126" width="180" height="22" rx="4" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
+<text x="130" y="137.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">tool</text>
+<rect x="40" y="154" width="180" height="22" rx="4" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="130" y="165.0" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">user</text>
+<text x="130" y="184" font-size="14" fill="#898781" text-anchor="middle" font-weight="normal" dominant-baseline="middle">…</text>
+<line x1="235" y1="115" x2="300" y2="115" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="300" y="70" width="170" height="90" rx="10" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="385" y="101" font-size="14" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle">the model</text>
+<text x="385" y="121" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">a stateless function</text>
+<text x="385" y="139" font-size="9.5" fill="#898781" text-anchor="middle" font-weight="normal" dominant-baseline="middle">remembers nothing between calls</text>
+<line x1="475" y1="115" x2="540" y2="115" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="630" y="24" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle">one message</text>
+<rect x="540" y="103" width="180" height="24" rx="4" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="630" y="115" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">assistant</text>
+<text x="630" y="141" font-size="9.5" fill="#898781" text-anchor="middle" font-weight="normal" dominant-baseline="middle">always role=assistant: text or a tool call</text>
+<path d="M 630 151 V 170 H 250 V 137.0 H 224" fill="none" stroke="#898781" stroke-width="1.4" marker-end="url(#arrow)" stroke-dasharray="4 3"/>
+<text x="440" y="182" font-size="9.5" fill="#898781" text-anchor="middle" font-weight="normal" dominant-baseline="middle">your code runs the tool and appends the result as a tool message; the model never writes one (Part 4)</text>
+<text x="40" y="226" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle">Everything else is code around it:</text>
+<rect x="262" y="214" width="86" height="24" rx="12" fill="#fcfcfb" stroke="#c3c2b7" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="305" y="226" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">memory</text>
+<rect x="358" y="214" width="86" height="24" rx="12" fill="#fcfcfb" stroke="#c3c2b7" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="401" y="226" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">tools</text>
+<rect x="454" y="214" width="86" height="24" rx="12" fill="#fcfcfb" stroke="#c3c2b7" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="497" y="226" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">retrieval</text>
+<rect x="550" y="214" width="86" height="24" rx="12" fill="#fcfcfb" stroke="#c3c2b7" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="593" y="226" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">guardrails</text>
+<rect x="646" y="214" width="86" height="24" rx="12" fill="#fcfcfb" stroke="#c3c2b7" stroke-width="1.2" stroke-dasharray="3 3"/>
+<text x="689" y="226" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">the gateway</text>
+<text x="40" y="250" font-size="10.5" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle">They prepare the list of messages, or do something with the answer.</text>
+</svg>

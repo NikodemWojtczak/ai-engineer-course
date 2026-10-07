@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="180" viewBox="0 0 760 180" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker></defs>
+<rect width="760" height="180" fill="#fcfcfb"/>
+<rect x="40" y="58" width="106" height="44" rx="4" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="93.0" y="80.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">system prompt</text>
+<rect x="150" y="58" width="91" height="44" rx="4" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="195.5" y="80.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">tool definitions</text>
+<rect x="245" y="58" width="146" height="44" rx="4" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="318.0" y="80.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">history</text>
+<rect x="395" y="58" width="146" height="44" rx="4" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="468.0" y="80.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">retrieved documents</text>
+<rect x="545" y="58" width="66" height="44" rx="4" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="578.0" y="80.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">question</text>
+<rect x="615" y="58" width="101" height="44" rx="4" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="665.5" y="80.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">answer</text>
+<path d="M 40 118 L 40 126 L 716 126 L 716 118" fill="none" stroke="#52514e" stroke-width="1.2"/>
+<text x="378.0" y="140" font-size="11.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle">the context window: everything the model can see for this one answer</text>
+<path d="M 40 46 L 40 38 L 611 38 L 611 46" fill="none" stroke="#898781" stroke-width="1"/>
+<text x="325.5" y="28" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">input: what you send</text>
+<path d="M 615 46 L 615 38 L 716 38 L 716 46" fill="none" stroke="#898781" stroke-width="1"/>
+<text x="665.5" y="28" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle">output</text>
+<text x="378.0" y="162" font-size="10.5" fill="#898781" text-anchor="middle" font-weight="normal" dominant-baseline="middle">what is not in the window does not exist for the model</text>
+</svg>
