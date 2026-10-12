@@ -1,17 +1,20 @@
 # AI Engineer Course — hands-on notebooks
 
 A video course for the team, built on the *Senior AI Engineer Skill Roadmap* (six levels). One notebook per level.
-Every concept is shown three times: **A** — with the plain OpenAI API, from scratch; **B** — step by step in LangGraph;
+Every concept is shown three times: **A** — with the plain OpenAI API, from scratch; **B** — with LangChain and LangGraph;
 **C** — in a high-level framework (Agno).
 
 | Level | Notebook | Status |
 |---|---|---|
-| 1 · Model foundations & the AI Gateway | [`notebooks/level_1_model_foundations_and_gateway.ipynb`](notebooks/level_1_model_foundations_and_gateway.ipynb) | **ready** — verified end to end against the real API on 2026-10-07 |
-| 2 · Tool calling & structured output | — | planned |
-| 3 · Context & memory | — | planned |
-| 4 · MCP, A2A & Skills | — | planned |
-| 5 · Evaluation and tracing | — | planned |
-| 6 · Security | — | planned |
+| 1 · Model foundations & the AI Gateway | [`level_1_model_foundations_and_gateway.ipynb`](notebooks/level_1_model_foundations_and_gateway.ipynb) | **ready** — verified end to end against the real API on 2026-10-09 |
+| 2 · Tool calling & structured output | [`level_2_tool_calling_and_structured_output.ipynb`](notebooks/level_2_tool_calling_and_structured_output.ipynb) | **ready** — verified end to end against the real API on 2026-10-12 |
+| 3 · Memory and retrieval | [`level_3_memory_and_retrieval.ipynb`](notebooks/level_3_memory_and_retrieval.ipynb) | **ready** — verified end to end against the real API on 2026-10-12 |
+| 4 · MCP, A2A and Skills | [`level_4_mcp_a2a_and_skills.ipynb`](notebooks/level_4_mcp_a2a_and_skills.ipynb) | **ready** — verified end to end against the real API on 2026-10-12 |
+| 5 · Evals and tracing | [`level_5_evals_and_tracing.ipynb`](notebooks/level_5_evals_and_tracing.ipynb) | **ready** — verified end to end against the real API on 2026-10-12 |
+| 6 · Attack and harden | [`level_6_attack_and_harden.ipynb`](notebooks/level_6_attack_and_harden.ipynb) | **ready** — verified end to end against the real API on 2026-10-12 |
+
+Take the levels in order. Each notebook rebuilds what it needs from the earlier ones in its Part 0 (the toy gateway,
+the NovaBank data, the agent loop), so it runs on its own, but the text assumes you have read the levels before it.
 
 ## Quick start
 
@@ -21,7 +24,7 @@ You need [`uv`](https://docs.astral.sh/uv/) (it installs Python 3.12 for you if 
 git clone https://github.com/NikodemWojtczak/ai-engineer-course.git && cd ai-engineer-course
 uv sync                                   # Python 3.12 + pinned packages from uv.lock (openai, langgraph, agno, jupyterlab …)
 cp .env.example .env                      # then put your OPENAI_API_KEY in .env  (the file is git-ignored — never commit it)
-uv run jupyter lab notebooks/             # open level_1_… and run the cells from the top
+uv run jupyter lab notebooks/             # open a notebook (start with level_1_…) and run the cells from the top
 ```
 
 The first cell checks for the key and stops with a clear message if it is missing.
@@ -30,34 +33,59 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
 ### What the run needs
 
 - **Models.** The key must have access to `gpt-4.1-mini`, `gpt-4o-mini`, `gpt-6-luna`, `gpt-6.1-sol` and `text-embedding-3-small`.
-  They are used through aliases set in Part 0 (`SMALL`, `REASONING`, `LARGE`, `EMBEDDING`), so you can swap them in one place.
-- **Cost.** A full run of Level 1 costs about **0.30–0.50 USD**. Most of it is the long-context experiment in Part 7;
-  lower `N_LINES` or `TRIALS_LONG` there to make it cheaper.
-- **Time.** About 3 minutes of API calls for the whole notebook (the author's last full run: 162 s), plus one or two minutes
-  the first time the optional LiteLLM section downloads its package.
-- **Ports.** The notebook runs a small toy gateway inside the kernel on `127.0.0.1:4010`, and the optional LiteLLM section
-  listens on `127.0.0.1:4020`. Both must be free.
-- **The optional LiteLLM section (Part 3)** starts a real LiteLLM gateway with
-  `uvx --python 3.12 --from 'litellm[proxy]==1.104.0' litellm`. It needs `uvx` on your `PATH` and network access.
-  If `uvx` is missing the cells skip themselves; if LiteLLM does not start, the notebook says so, points you to
-  `notebooks/litellm_demo/litellm.log`, and moves on. Nothing later depends on it.
+  They are used through aliases set in Part 0 of every notebook (`SMALL`, `REASONING`, `LARGE`, `EMBEDDING`), so you can swap
+  them in one place. Level 6 also calls OpenAI's moderation model `omni-moderation-latest`, which is free.
+- **Cost, time and ports.** What one full run took when the author ran it:
 
-## How to read the notebook
+  | Level | Cost | Time | Ports on `127.0.0.1` |
+  |---|---|---|---|
+  | 1 | 0.30–0.50 USD | about 3 min | 4010, and 4020 for the optional LiteLLM section |
+  | 2 | 0.02 USD | under 2 min | 4120 |
+  | 3 | 0.03 USD | about 2 min | 4130 |
+  | 4 | 0.02 USD | about 1 min | 4140–4149 |
+  | 5 | 0.12 USD | under 5 min | 4150 |
+  | 6 | 0.01 USD | under 3 min | 4160 |
 
-- Run it **top to bottom**; later parts reuse functions and the gateway log from earlier parts.
+  Most of Level 1's cost is the long-context experiment in Part 7; lower `N_LINES` or `TRIALS_LONG` there to make it cheaper.
+  Every notebook runs its own toy gateway inside the kernel (Level 4 also two MCP servers and three A2A agents), each level on
+  its own ports, so two levels can run side by side. The last cell of every notebook stops what it started and prints what
+  your run cost.
+- **The optional LiteLLM section of Level 1 (Part 3)** starts a real LiteLLM gateway with
+  `uvx --python 3.12 --from 'litellm[proxy]==1.104.0' litellm`. It needs `uvx` on your `PATH` and network access; the first
+  time it adds a minute or two while the package downloads. If `uvx` is missing the cells skip themselves; if LiteLLM does
+  not start, the notebook says so, points you to `notebooks/litellm_demo/litellm.log`, and moves on. Nothing later depends on it.
+- **No other accounts.** Level 5 keeps its traces in memory, so you need no LangSmith, Langfuse or Phoenix account.
+  Agno reports usage to its own servers by default; every notebook switches that off with `telemetry=False`, and Level 5
+  also sets `AGNO_TELEMETRY=false`, because Agno's judge eval builds an agent of its own that ignores the flag.
+
+## How to read the notebooks
+
+- Run a notebook **top to bottom**; later parts reuse functions and the gateway log from earlier parts.
   To run it again, use *Kernel → Restart Kernel and Run All Cells*.
-- The notebook comes **with the outputs of the author's run** against the real API (2026-10-07), so you can read it — answers,
-  tables and charts — without running it, on GitHub or in Jupyter. When you run it yourself the numbers will differ a little,
-  because the model samples and prices change; the arguments never depend on an exact value.
+- The notebooks come **with the outputs of the author's run** against the real API (Level 1 on 2026-10-07, Levels 4–6 on
+  2026-10-08, Levels 2 and 3 on 2026-10-12; cells added or reformatted later, such as the `# Try it` previews, and the
+  LiteLLM section of Level 1 show a run of 2026-10-09 or 2026-10-12), so you
+  can read them — answers, tables and charts — without running them, on GitHub or in Jupyter. When you run one yourself
+  the numbers will differ a little, because the model samples and prices change; the text says "when we ran it" wherever
+  it quotes a measured result, and the arguments never depend on an exact value.
 - Three kinds of cells come back in every part:
   **🔮 Predict** — guess the result before running the next cell;
   **💥 Break it** — a working example is deliberately broken, then repaired;
   **🧠 Check yourself** — a question with the answer folded underneath.
   Each part ends with **📌 Takeaways**.
+- After a definition — a tool, a schema, a helper, a prompt, the test data — a few lines marked `# Try it` often run it
+  once, without the model, so you see what goes in and what comes out before an agent uses it. A section number in
+  brackets, such as "(0.5)", tells you where a name you meet was defined.
+- From Level 2 on, each idea is built by hand first and then with LangChain + LangGraph and with Agno. **Open the box** shows what each
+  version actually sent through the gateway, and **New word, same idea** maps the framework names to what you built by hand.
 - The examples use a fictional bank, **NovaBank**, and fictional customers. Keep it that way: everything the notebook sends
   goes to the OpenAI API, so never paste real customer data, internal documents or credentials into a cell.
 - "The platform" / "the gateway" in the text means the OpenAI-compatible gateway (LiteLLM) your applications call at work.
-  The notebook builds a toy version of it in Part 3 so you can see what such a gateway does with a request.
+  Level 1 builds a toy version of it in Part 3 so you can see what such a gateway does with a request; every later level
+  sends all its calls through the same toy gateway.
+- **Level 6 attacks only its own toy agent.** The "secret" is a made-up canary string, every address uses the `.example`
+  domain, a "sent" email lands in a Python list, and the payloads only move the canary between the notebook's own fixtures.
+  Do not point these attacks at a real system without permission.
 
 ## Level 1 at a glance
 
@@ -73,6 +101,68 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
 | 7 · Failure modes | hallucination, lost in the middle, instruction drift — each one measured, then side by side |
 | 8 · Three layers | one chatbot written three times (plain API, LangGraph, Agno) behind the same gateway; one failure in three layers; a model swap without touching the applications |
 | 9 · Recap | the mental model once more, glossary, quiz, what comes next |
+
+## Level 2 at a glance
+
+| Part | What you will see |
+|---|---|
+| 0 · Setup | the toy gateway and the NovaBank data from Level 1; a toy bank with four tools |
+| 1 · One tool call by hand | the schema is all the model knows; the model writes a call, your code runs it, the result goes back by id; a `tool` message that answers nothing; which models call tools |
+| 2 · The agent loop | the loop in eleven lines; a tool that raises; two tools in a row and several at once; a loop that never ends and the step limit; what `tool_choice` does |
+| 3 · Structured output | from free text to JSON mode to a strict JSON schema; a schema strict mode rejects; Pydantic; a failed validation sent back to the model |
+| 4 · Tool design | look-alike tools — the description decides; typed arguments and enums; errors the model can act on; a confirmation step before a refund; what the tool schemas cost on every call |
+| 5 · Three layers | one support agent written three times (plain API, LangChain + LangGraph, Agno); what each one sent through the gateway; one failure in three layers |
+| 6 · Recap | the one idea once more, glossary, quiz, what comes next |
+
+## Level 3 at a glance
+
+| Part | What you will see |
+|---|---|
+| 0 · Setup | the gateway from Level 1, now keeping every request body; the handbook and twenty policy paragraphs; ten questions with known answers |
+| 1 · Short-term memory | a turn that needs turn 1; the history is data you send; trimming that forgets; a summary that drops the facts and one that keeps them; LangGraph's checkpointer and LangChain's summary middleware; Agno's sessions; what reached the model on turn 6 |
+| 2 · Long-term memory | a table of facts with their source; one sentence that poisons every later session; a label in the prompt vs a rule in code; LangGraph's store; Agno's user memories and what they do not record |
+| 3 · Retrieval | the whole corpus vs three passages; embeddings, BM25 and hybrid search measured with recall@3; a miss you cannot see in the answer; a reranker; answers with citations; search as a tool in LangChain and Agno |
+| 4 · The context layout | one request built from budgeted blocks; stable blocks first so the provider's cache works, and what breaks it |
+| 5 · Recap | the mental model once more, glossary, quiz, what comes next |
+
+## Level 4 at a glance
+
+| Part | What you will see |
+|---|---|
+| 0 · Setup | the gateway, the bank and the agent loop from Level 2, and a window into every request |
+| 1 · Why protocols | three boundaries — another team's tools, another team's agent, procedures kept in files — and why a standard turns N × M pieces of glue into N + M |
+| 2 · MCP | our tools as an MCP server; the protocol by hand over HTTP, and a tool error vs a protocol error; one changed sentence in a server's tool description that books a refund a hundred times too large, and how to catch it; resources and prompts; LangChain's `MCPAdapter` and Agno's `MCPTools`; an async tool called from sync code |
+| 3 · A2A | another team's agent called by hand; a card that promises too much; the A2A SDK around a LangGraph agent; Agno's AgentOS; an Agno client that silently drops the SDK server's answer; who pays for which call |
+| 4 · Skills | an agent that does not know the procedure; a catalog in the prompt and the steps on demand; a look-alike skill; the same in LangChain + LangGraph; Agno's built-in skills measured against our version |
+| 5 · Putting it together | one request that uses an MCP tool, the lending agent and a skill; which one to choose when |
+| 6 · Recap | the mental model once more, glossary, quiz, what comes next |
+
+## Level 5 at a glance
+
+| Part | What you will see |
+|---|---|
+| 0 · Setup | the gateway, the NovaBank tickets and handbook, and the support agent from Level 2; an eval set of 30 tasks of four kinds, with references read from the handbook |
+| 1 · The first evaluator, by hand | an evaluator is a function; fourteen tickets, one number and its interval; a grader with a bug; a grader for "I don't know" |
+| 2 · A model as the judge | a rubric of observable conditions; the judge measured on answers with a known verdict (TPR and TNR); the repair: give the judge the source; position bias; from the judge's number to the true number; the same judge in openevals and Agno |
+| 3 · Trajectory evals | which tools, in which order: four match modes; 39 is not "39.0"; a step whose order is a rule; agentevals for LangChain and Agno's `ReliabilityEval`, which does not look at the order |
+| 4 · Outcome evals and pass^k | a booking tool that silently loses every fourth booking, and the only grader that sees it; a grader with a bug; pass@k vs pass^k; the repair: read after write |
+| 5 · Tracing | one trace id from the agent to the gateway; a span for every step; the forgotten inject; LangChain and Agno with an instrumentor; the same span in three dialects |
+| 6 · The harness | three agents on the same 30 tasks, twice, in one table with cost and time per run; the model behind an alias changes; a grader that crashes; what to look at first when a number drops |
+| 7 · Recap | the mental model once more, glossary, quiz, what comes next |
+
+## Level 6 at a glance
+
+| Part | What you will see |
+|---|---|
+| 0 · Setup | the safety rules; a toy world (inbox, files, outbox, refunds) and its tools; a stub model that always gives in, next to the live ones; the attack success rate |
+| 1 · Direct injection | resistance per attempt vs per attacker; an attack ladder measured on two models; what a leak reaches; a secret in the prompt is a secret in the answer |
+| 2 · Indirect injection | an email that carries the instruction; the lethal trifecta; a leak through a markdown image; links stripped at the gateway; reading split from sending |
+| 3 · Supply chain | a poisoned tool description, live; a linter for descriptions and what it misses; the rug pull; hostile skills and typosquatting |
+| 4 · Least privilege | a policy on tools, arguments and role; a colleague's address that passes the domain check; a narrow verb and an output check; the same in LangChain middleware and Agno tool hooks |
+| 5 · Human approval | approve the arguments, not the summary; approval fatigue; "don't ask again" scoped too loosely; LangChain's `HumanInTheLoopMiddleware` and Agno's `requires_confirmation` |
+| 6 · Guardrails | a regex, an LLM classifier and moderation scored on 20 attacks and 20 benign messages; base64 walks past them; the output guard; a guard on the gateway; the same in LangChain and Agno |
+| 7 · Structural defences | spotlighting; plan-then-execute; the dual-LLM pattern; a defence map |
+| 8 · Harden, measure, recap | all the layers in one agent; attacks and benign tasks scored before and after; the OWASP LLM Top 10; glossary and quiz |
 
 ## What is in this repository
 

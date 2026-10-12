@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="330" viewBox="0 0 760 330" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<rect width="760" height="330" fill="#fcfcfb"/>
+<text x="40" y="22" font-size="12.5" fill="#0b0b0b" font-weight="bold" dominant-baseline="middle">One request, from the most stable block to the newest</text>
+
+<!-- the blocks of the request, top to bottom -->
+<rect x="40" y="42" width="330" height="74" rx="4" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="56" y="68" font-size="11.5" fill="#0b0b0b" font-weight="bold" dominant-baseline="middle">Rules + policies</text>
+<text x="56" y="90" font-size="10" fill="#52514e" dominant-baseline="middle">system message · written by the developer</text>
+
+<rect x="40" y="120" width="330" height="40" rx="4" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="56" y="134" font-size="11.5" fill="#0b0b0b" font-weight="bold" dominant-baseline="middle">Customer facts</text>
+<text x="56" y="150" font-size="10" fill="#52514e" dominant-baseline="middle">end of the system message · long-term memory (Part 2)</text>
+
+<rect x="40" y="164" width="330" height="54" rx="4" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="56" y="184" font-size="11.5" fill="#0b0b0b" font-weight="bold" dominant-baseline="middle">History</text>
+<text x="56" y="202" font-size="10" fill="#52514e" dominant-baseline="middle">user and assistant messages · short-term memory (Part 1)</text>
+
+<rect x="40" y="226" width="330" height="44" rx="4" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="56" y="241" font-size="11.5" fill="#0b0b0b" font-weight="bold" dominant-baseline="middle">Passages</text>
+<text x="56" y="258" font-size="10" fill="#52514e" dominant-baseline="middle">last user message · retrieval (Part 3)</text>
+
+<rect x="40" y="274" width="330" height="30" rx="4" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="56" y="289" font-size="11.5" fill="#0b0b0b" font-weight="bold" dominant-baseline="middle">Question</text>
+<text x="140" y="289" font-size="10" fill="#52514e" dominant-baseline="middle">last user message · the customer</text>
+
+<!-- budgets -->
+<text x="362" y="138" font-size="9.5" fill="#898781" text-anchor="end" dominant-baseline="middle">budget</text>
+<text x="362" y="184" font-size="9.5" fill="#898781" text-anchor="end" dominant-baseline="middle">budget</text>
+<text x="362" y="241" font-size="9.5" fill="#898781" text-anchor="end" dominant-baseline="middle">budget</text>
+
+<!-- brackets on the right -->
+<path d="M 392 44 L 402 44 L 402 216 L 392 216" fill="none" stroke="#2a78d6" stroke-width="1.5"/>
+<text x="416" y="112" font-size="11" fill="#0b0b0b" font-weight="bold" dominant-baseline="middle">Repeated by every request of a session</text>
+<text x="416" y="131" font-size="10" fill="#52514e" dominant-baseline="middle">The provider can cache this prefix (1,024 tokens or more)</text>
+<text x="416" y="147" font-size="10" fill="#52514e" dominant-baseline="middle">and bills it at the cached price.</text>
+
+<path d="M 392 228 L 402 228 L 402 302 L 392 302" fill="none" stroke="#eb6834" stroke-width="1.5"/>
+<text x="416" y="252" font-size="11" fill="#0b0b0b" font-weight="bold" dominant-baseline="middle">New with every question</text>
+<text x="416" y="271" font-size="10" fill="#52514e" dominant-baseline="middle">Not in the cache yet. Kept at the end, next to the question,</text>
+<text x="416" y="287" font-size="10" fill="#52514e" dominant-baseline="middle">where the model reads most carefully.</text>
+
+<text x="40" y="320" font-size="10" fill="#898781" dominant-baseline="middle">Move a changing block to the top, and nothing after it can be cached.</text>
+</svg>
