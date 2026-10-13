@@ -6,12 +6,12 @@ Every concept is shown three times: **A** — with the plain OpenAI API, from sc
 
 | Level | Notebook | Status |
 |---|---|---|
-| 1 · Model foundations & the AI Gateway | [`level_1_model_foundations_and_gateway.ipynb`](notebooks/level_1_model_foundations_and_gateway.ipynb) | **ready** — verified end to end against the real API on 2026-10-09 |
-| 2 · Tool calling & structured output | [`level_2_tool_calling_and_structured_output.ipynb`](notebooks/level_2_tool_calling_and_structured_output.ipynb) | **ready** — verified end to end against the real API on 2026-10-12 |
-| 3 · Memory and retrieval | [`level_3_memory_and_retrieval.ipynb`](notebooks/level_3_memory_and_retrieval.ipynb) | **ready** — verified end to end against the real API on 2026-10-12 |
-| 4 · MCP, A2A and Skills | [`level_4_mcp_a2a_and_skills.ipynb`](notebooks/level_4_mcp_a2a_and_skills.ipynb) | **ready** — verified end to end against the real API on 2026-10-12 |
-| 5 · Evals and tracing | [`level_5_evals_and_tracing.ipynb`](notebooks/level_5_evals_and_tracing.ipynb) | **ready** — verified end to end against the real API on 2026-10-12 |
-| 6 · Attack and harden | [`level_6_attack_and_harden.ipynb`](notebooks/level_6_attack_and_harden.ipynb) | **ready** — verified end to end against the real API on 2026-10-12 |
+| 1 · Model foundations & the AI Gateway | [`level_1_model_foundations_and_gateway.ipynb`](notebooks/level_1_model_foundations_and_gateway.ipynb) | **ready** — verified end to end against the real API on 2026-10-13 |
+| 2 · Tool calling & structured output | [`level_2_tool_calling_and_structured_output.ipynb`](notebooks/level_2_tool_calling_and_structured_output.ipynb) | **ready** — verified end to end against the real API on 2026-10-13 |
+| 3 · Memory and retrieval | [`level_3_memory_and_retrieval.ipynb`](notebooks/level_3_memory_and_retrieval.ipynb) | **ready** — verified end to end against the real API on 2026-10-13 |
+| 4 · MCP, A2A and Skills | [`level_4_mcp_a2a_and_skills.ipynb`](notebooks/level_4_mcp_a2a_and_skills.ipynb) | **ready** — verified end to end against the real API on 2026-10-13 |
+| 5 · Evals and tracing | [`level_5_evals_and_tracing.ipynb`](notebooks/level_5_evals_and_tracing.ipynb) | **ready** — verified end to end against the real API on 2026-10-13 |
+| 6 · Attack and harden | [`level_6_attack_and_harden.ipynb`](notebooks/level_6_attack_and_harden.ipynb) | **ready** — verified end to end against the real API on 2026-10-13 |
 
 Take the levels in order. Each notebook rebuilds what it needs from the earlier ones in its Part 0 (the toy gateway,
 the NovaBank data, the agent loop), so it runs on its own, but the text assumes you have read the levels before it.
@@ -62,12 +62,11 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
 
 - Run a notebook **top to bottom**; later parts reuse functions and the gateway log from earlier parts.
   To run it again, use *Kernel → Restart Kernel and Run All Cells*.
-- The notebooks come **with the outputs of the author's run** against the real API (Level 1 on 2026-10-07, Levels 4–6 on
-  2026-10-08, Levels 2 and 3 on 2026-10-12; cells added or reformatted later, such as the `# Try it` previews, and the
-  LiteLLM section of Level 1 show a run of 2026-10-09 or 2026-10-12), so you
-  can read them — answers, tables and charts — without running them, on GitHub or in Jupyter. When you run one yourself
-  the numbers will differ a little, because the model samples and prices change; the text says "when we ran it" wherever
-  it quotes a measured result, and the arguments never depend on an exact value.
+- The notebooks come **with the outputs of the author's run** against the real API (one full run per level, all six on
+  2026-10-13), so you can read them — answers, tables and charts — without running them, on GitHub or in Jupyter. Every
+  printed value says what it is: a label before a short value, a `=== title ===` header above a block or a table. When you
+  run one yourself the numbers will differ a little, because the model samples and prices change; the text says "when we
+  ran it" wherever it quotes a measured result, and the arguments never depend on an exact value.
 - Three kinds of cells come back in every part:
   **🔮 Predict** — guess the result before running the next cell;
   **💥 Break it** — a working example is deliberately broken, then repaired;
@@ -142,7 +141,7 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
 | Part | What you will see |
 |---|---|
 | 0 · Setup | the gateway, the NovaBank tickets and handbook, and the support agent from Level 2; an eval set of 30 tasks of four kinds, with references read from the handbook |
-| 1 · The first evaluator, by hand | an evaluator is a function; fourteen tickets, one number and its interval; a grader with a bug; a grader for "I don't know" |
+| 1 · The first evaluator, by hand | an evaluator is a function; fourteen tickets, one number and its n; a grader with a bug; a grader for "I don't know" |
 | 2 · A model as the judge | a rubric of observable conditions; the judge measured on answers with a known verdict (TPR and TNR); the repair: give the judge the source; position bias; from the judge's number to the true number; the same judge in openevals and Agno |
 | 3 · Trajectory evals | which tools, in which order: four match modes; 39 is not "39.0"; a step whose order is a rule; agentevals for LangChain and Agno's `ReliabilityEval`, which does not look at the order |
 | 4 · Outcome evals and pass^k | a booking tool that silently loses every fourth booking, and the only grader that sees it; a grader with a bug; pass@k vs pass^k; the repair: read after write |
