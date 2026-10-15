@@ -13,15 +13,15 @@
 <text x="364.65770566268577" y="255.79740091327534" font-size="10.5" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">p16: "An urgent same-day …"</text>
 <path d="M 190.3537860237056 251.3739140678702 A 70 70 0 0 0 183.0963032727961 244.83924724752944" fill="none" stroke="#0b0b0b" stroke-width="1.2"/>
 <rect x="540" y="226" width="224" height="57" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
-<text x="550" y="240.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">cos(angle) = a · b / (|a| · |b|)</text>
-<text x="550" y="255.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">With |a| = |b| = 1 it is just a · b,</text>
-<text x="550" y="270.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the sum of a[i] × b[i].</text>
+<text x="550" y="240.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Only the direction counts:</text>
+<text x="550" y="255.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">a long text and a short one</text>
+<text x="550" y="270.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">can point the same way.</text>
 <rect x="540" y="292" width="224" height="57" rx="6" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
-<text x="550" y="306.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">1: the same direction, similar meaning</text>
-<text x="550" y="321.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">0: unrelated</text>
+<text x="550" y="306.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the same direction: a score near 1</text>
+<text x="550" y="321.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">a right angle: unrelated, 0</text>
 <text x="550" y="336.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">The ranking sorts by it, largest first.</text>
 <rect x="540" y="158" width="224" height="42" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
 <text x="550" y="172.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">question and h19: a small angle,</text>
-<text x="550" y="187.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">a cosine close to 1. p16: further.</text>
+<text x="550" y="187.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">a score close to 1. p16: further.</text>
 <text x="24" y="380" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">The picture has 2 numbers per vector; the notebook asks for 256. The angle works the same way.</text>
 </svg>

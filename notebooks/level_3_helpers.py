@@ -1,14 +1,16 @@
 """Level 3 helpers: everything the notebook uses but does not teach.
 
 The notebook imports each name it needs from this file, so ⌘+click (or F12) on a name in the notebook opens it here.
-Nothing in this file is new to the course: these are the helpers of Level 1 and of Part 0 of the first edition.
+Most of it comes from Level 1 and from Part 0 of the first edition. Two drawing helpers are new, word_map and
+show_memory_run: they only draw what the notebook explains.
 
     1. Models and prices             SMALL, REASONING, LARGE, EMBEDDING, PRICES, cost_usd
-    2. Printing                      plain, show_json, show_messages, show_error, bar_chart
+    2. Printing                      plain, show_json, show_messages, show_error, bar_chart, word_map
     3. Small tools                   count_tokens, run_many
     4. The toy gateway               gateway_app, serve, stop_servers, gateway_log, refuse, keep_request, keep_usage,
                                      show_log, spent, show_sent, reply_text, find_call
     5. NovaBank data                 TICKETS, HANDBOOK, POLICIES
+    6. A call tree from the log      wrapped, show_memory_run
 
 Importing this file loads the key from .env, creates the gateway's connection to the provider, adds the two hooks that
 keep what reached the gateway, and sets pandas to print every row and every text whole. It starts no server: the
@@ -18,6 +20,7 @@ import dataclasses
 import json
 import os
 import random
+import textwrap
 import threading
 import time
 import uuid
@@ -25,6 +28,7 @@ from concurrent.futures import ThreadPoolExecutor
 
 import httpx
 import matplotlib.pyplot as plt
+import numpy as np
 import pandas as pd
 import tiktoken
 import uvicorn
@@ -125,6 +129,30 @@ def bar_chart(values, title, fmt="{:,.2f}", color=BLUE):
     plt.show()
 
 
+def word_map(labels, vectors, title, steps=()):
+    """A map of a few embeddings: each vector flattened to two numbers, the two directions in which these vectors differ
+    most (a principal component analysis), and drawn as a point. Each step (a, b) is an arrow from label a to label b.
+    The map is turned so that the first label sits at the top right."""
+    centred = vectors - vectors.mean(axis=0)
+    directions = np.linalg.svd(centred, full_matrices=False)[2][:2]
+    points = centred @ directions.T
+    points = points * np.where(points[0] < 0, -1, 1)
+    where = dict(zip(labels, points))
+    fig, ax = plt.subplots(figsize=(5.5, 4))
+    ax.scatter(points[:, 0], points[:, 1], color=BLUE, zorder=3)
+    for label, (x, y) in where.items():
+        ax.annotate(label, (x, y), textcoords="offset points", xytext=(7, 5), fontsize=11)
+    for a, b in steps:
+        ax.annotate("", where[b], where[a], arrowprops={"arrowstyle": "->", "color": ORANGE, "lw": 1.6})
+    ax.axhline(0, color=GRAY, lw=0.8)
+    ax.axvline(0, color=GRAY, lw=0.8)
+    ax.set_xlabel("direction 1: the one in which the words differ most")
+    ax.set_ylabel("direction 2")
+    ax.margins(0.25)
+    ax.set_title(title, loc="left")
+    plt.show()
+
+
 # ---------------------------------------------------------------------------------------------------- 3. small tools
 enc = tiktoken.get_encoding("o200k_base")
 
@@ -175,6 +203,7 @@ def gateway(endpoint: str, body: dict, request: Request):
         for check in before_call:
             check(body, entry, request.headers)
         started = time.perf_counter()
+        entry["started"] = round(time.time(), 3)                    # when it went to the provider: orders a call tree
         for attempt in range(4):                                    # the platform retries rate limits for its clients
             upstream = provider.post(endpoint, json=body)
             if upstream.status_code not in (429, 500, 502, 503) or attempt == 3:
@@ -238,8 +267,9 @@ def stop_servers():
 
 
 def show_log(last=5, title="Gateway log"):
-    """The last few gateway entries as a table, with a title printed above it: the nine fields the gateway writes. The four
-    that the hooks add ("sent", "received", "input", "cached") hold whole requests and answers; show_sent and show_json print them."""
+    """The last few gateway entries as a table, with a title printed above it: the nine fields of Level 1. The time a call
+    went out ("started") and the four fields that the hooks add ("sent", "received", "input", "cached") are left out:
+    show_sent and show_json print them."""
     print(f"=== {title} ===")
     columns = ["id", "team", "app", "model", "status", "note", "tokens", "cost", "seconds"]
     return pd.DataFrame(gateway_log)[columns].tail(last)
@@ -340,3 +370,82 @@ POLICIES = """NovaBank customer policies, edition 2026-10.
 19. A returned direct debit costs 4 EUR. NovaBank waives this fee once per calendar year, automatically. The customer does not need to ask for it.
 20. All fees are listed on the monthly statement. A customer can contest a fee within 90 days of the statement date. Fees for a product the customer never used are refunded in full.
 """
+
+
+# ---------------------------------------------------------------------------------------------------- 6. a call tree from the log
+def wrapped(text, width):
+    """The lines of a text, each one wrapped at `width` characters. Nothing is cut: long lines go on in the next ones."""
+    return [piece for line in str(text).splitlines() or [""]
+            for piece in textwrap.wrap(line, width, break_on_hyphens=False) or [""]]
+
+
+def show_memory_run(entries, started, seconds, title, width=120):
+    """The call tree of one Agno run with automatic memory, built from its gateway log entries (this level records no
+    spans). `started` and `seconds`: when the run began (time.time()) and how long it took.
+
+    A call that offers the memory tools belongs to the memory manager; the other one is the answer call. Each line: its
+    start (seconds after the run began), how long it took, and what it did. Under a model call come the system, developer
+    and user messages it was sent that the tree has not shown yet, the tools it was offered, then the tools it asks for or
+    its whole text. Between two calls of the memory manager stand the memory tools that Agno ran itself: their whole input
+    from the call that asked for them, their whole output from the next call, which sends it back to the model."""
+    entries = sorted(entries, key=lambda entry: entry["started"])
+    shown = set()                                                   # the (role, text) messages the tree has shown
+
+    def model_call(entry, name):
+        return {"start": entry["started"] - started, "took": entry["seconds"], "entry": entry, "children": [],
+                "headline": f"{name} · {entry['model']} · {entry['received']['usage']['prompt_tokens']} → "
+                            f"{entry['received']['usage']['completion_tokens']} tokens"}
+
+    def call_details(entry):
+        """Read when the line is printed, so that each message shows under the first call of the tree that sent it."""
+        details = []
+        for message in entry["sent"]["messages"]:
+            text = message["content"] if isinstance(message["content"], str) else json.dumps(message["content"])
+            if message["role"] in ("system", "developer", "user") and (message["role"], text) not in shown:
+                shown.add((message["role"], text))
+                details.append((f"{message['role']}:", text))
+        tools = [tool["function"]["name"] for tool in entry["sent"].get("tools", [])]
+        if tools:
+            details.append(("tools:", ", ".join(tools)))
+        reply = entry["received"]["choices"][0]["message"]
+        details += [("asks for:", f"{call['function']['name']}({call['function']['arguments']})")
+                    for call in reply.get("tool_calls") or []]
+        if reply.get("content"):
+            details.append(("text:", reply["content"]))
+        return details
+
+    memory = [entry for entry in entries if entry["sent"].get("tools")]
+    steps = []                                                      # the memory manager's calls and tools, in order
+    for number, entry in enumerate(memory):
+        steps.append(model_call(entry, f"model call {number + 1}"))
+        calls = entry["received"]["choices"][0]["message"].get("tool_calls") or []
+        after = memory[number + 1] if number + 1 < len(memory) else None   # the call that sends the results back
+        results = {message.get("tool_call_id"): message["content"] for message in (after or {"sent": {}})["sent"].get(
+            "messages", []) if message["role"] == "tool"}
+        ended = entry["started"] + entry["seconds"]
+        for call in calls:
+            steps.append({"start": ended - started, "took": (after["started"] - ended) if after else 0.0, "children": [],
+                          "headline": f"{call['function']['name']} · a tool Agno runs itself: it writes the db",
+                          "details": [("input:", call["function"]["arguments"]),
+                                      ("output:", results.get(call["id"], "(not sent back)"))]})
+    children = [model_call(entry, "answer call") for entry in entries if not entry["sent"].get("tools")]
+    if memory:
+        children.append({"start": memory[0]["started"] - started, "details": [], "children": steps,
+                         "took": memory[-1]["started"] + memory[-1]["seconds"] - memory[0]["started"],
+                         "headline": "memory manager · a MemoryManager, not an agent · in a background thread"})
+    children.sort(key=lambda node: node["start"])
+
+    def show(node, indent, branch):
+        print(f"{node['start']:+6.2f} {node['took']:5.2f} s  {indent}{branch}{node['headline']}")
+        below = node["children"]
+        indent_below = indent + {"├─ ": "│  ", "└─ ": "   "}.get(branch, "")  # the root has no branch
+        under = " " * 16 + indent_below + ("│  " if below else "   ")   # keeps the tree's lines going on the left
+        for label, value in call_details(node["entry"]) if "entry" in node else node["details"]:
+            for number, piece in enumerate(wrapped(value, max(width - len(under) - 11, 40))):
+                print(f"{under}{label if number == 0 else '':<11}{piece}")
+        for number, child in enumerate(below):
+            show(child, indent_below, "└─ " if number == len(below) - 1 else "├─ ")
+
+    print(f"=== Call tree: {title} ({len(entries)} model calls, from the gateway log) ===")
+    print(" start    took  call")
+    show({"start": 0.0, "took": seconds, "headline": "Agent.run", "details": [], "children": children}, "", "")
