@@ -44,7 +44,7 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
   |---|---|---|---|
   | 1 | 0.30–0.50 USD | about 3 min | 4010, and 4020 for the optional LiteLLM section |
   | 2 | 0.02 USD | under 2 min | 5120 |
-  | 3 | 0.03 USD | about 2 min | 5130 |
+  | 3 | 0.02 USD | about 2 min | 5130 |
   | 4 | 0.03 USD | about 1 min | 5140–5149 |
   | 5 | 0.12 USD | about 4 min | 5150 |
   | 6 | 0.01 USD | about 2 min | 5160 |
@@ -66,15 +66,14 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
 - Run a notebook **top to bottom**; later parts reuse functions and the gateway log from earlier parts.
   To run it again, use *Kernel → Restart Kernel and Run All Cells*.
 - The notebooks come **with the outputs of the author's run** against the real API (one full run per level: Level 1 on
-  2026-10-13, Levels 2–6 on 2026-10-14), so you can read them — answers, tables and charts — without running them, on
+  2026-10-13, Levels 2 and 4–6 on 2026-10-14, Level 3 on 2026-10-15), so you can read them — answers, tables and charts — without running them, on
   GitHub or in Jupyter. Every printed value says what it is: a label before a short value, a `=== title ===` header above
   a block or a table. When you run one yourself the numbers will differ a little, because the model samples and prices
   change; the text says "when we ran it" wherever it quotes a measured result, and the arguments never depend on an exact
   value.
-- **Levels 2–6 put the theory next to the code.** Each part between Part 0 and the recap opens with its use case and a
-  table of what to read and what to run, in order. Then come short theory sections (T 1.1, T 1.2, …), each followed by
-  the examples that show it (Example 1.1, …). An example that solves a problem says so first: **Use case**, **Problem**,
-  **What solves it**. When a cell prints an object, a table under the output explains it field by field.
+- **Levels 2–6 put the theory next to the code.** Each part between Part 0 and the recap opens with a short
+  introduction. Then come short theory sections (T 1.1, T 1.2, …), each followed right away by the examples that show it
+  (Example 1.1, …). When a cell prints an object, it prints it whole, and the text under the output says what to look at.
 - From Level 2 on, Part 0 lists the data and the functions the notebook uses, and in which part; the functions that the
   notebook needs but does not teach are in `level_N_helpers.py` next to it, and the first cell imports them by name.
 - Two kinds of cells come back through the parts:
@@ -128,10 +127,10 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
 | Part | What you will see |
 |---|---|
 | 0 · Setup | the gateway from Level 1, now keeping every request body; the handbook and twenty policy paragraphs; ten questions with known answers |
-| 1 · Short-term memory | a turn that needs turn 1; the history is data you send; trimming that forgets; a summary that drops the facts and one that keeps them; LangGraph's checkpointer and LangChain's summary middleware; Agno's sessions; what reached the model on turn 6 |
-| 2 · Long-term memory | a table of facts with their source; one sentence that poisons every later session; a label in the prompt vs a rule in code; LangGraph's store; Agno's user memories and what they do not record |
-| 3 · Retrieval | the whole corpus vs three passages; embeddings, BM25 and hybrid search measured with recall@3; a miss you cannot see in the answer; a reranker; answers with citations; search as a tool in LangChain and Agno |
-| 4 · The context layout | one request built from budgeted blocks; stable blocks first so the provider's cache works, and what breaks it |
+| 1 · Short-term memory | a turn that needs turn 1; the history is data you send; trimming that forgets; a summary that drops the facts and one that keeps them; LangGraph's checkpointer and LangChain's summary middleware; Agno's sessions and its summary after every turn; what reached the model on turn 6 |
+| 2 · Long-term memory | a table of facts with their source; one sentence that poisons every later session; a label in the prompt vs a rule in code; LangGraph's store; Agno's user memories, the memory manager's calls as call trees, and what they do not record |
+| 3 · Retrieval | the whole corpus vs three passages; what an embedding sees (king, queen, man, woman, and five sentences); embeddings, BM25 and hybrid search measured with recall@3; a miss you cannot see in the answer; a reranker; search as a tool in LangChain and Agno |
+| 4 · Caching | theory only: the order of the blocks in a request, the most stable first, so that the provider's prompt cache can reuse the start |
 | 5 · Recap | the one idea once more, glossary, clean up |
 
 ## Level 4 at a glance
