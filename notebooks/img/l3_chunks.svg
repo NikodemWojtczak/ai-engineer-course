@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="372" viewBox="0 0 780 372" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="372" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">From a document to chunks</text>
+<rect x="24" y="54" width="290" height="214" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="36" y="74" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">NovaBank customer policies, …</text>
+<text x="36" y="93" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">## Refunds</text>
+<text x="36" y="112" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">1. A card payment to a shop is …</text>
+<text x="36" y="131" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">2. A refund for a confirmed …</text>
+<text x="36" y="150" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">…</text>
+<text x="36" y="169" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">## Disputes</text>
+<text x="36" y="188" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">6. A dispute is opened with …</text>
+<text x="36" y="207" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">…</text>
+<text x="36" y="226" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">## Fees</text>
+<text x="36" y="245" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">20. All fees are listed on …</text>
+<line x1="320" y1="160" x2="390" y2="160" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="355" y="148" font-size="10" fill="#898781" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">make_chunks</text>
+<rect x="396" y="54" width="368" height="64" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="408" y="69" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"id": "p01"</text>
+<text x="408" y="85" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"section": "Refunds"</text>
+<text x="408" y="101" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"text": "Refunds: 1. A card payment …"</text>
+<rect x="396" y="128" width="368" height="64" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="408" y="143" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"id": "p06"</text>
+<text x="408" y="159" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"section": "Disputes"</text>
+<text x="408" y="175" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"text": "Disputes: 6. A dispute is …"</text>
+<rect x="396" y="202" width="368" height="64" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="408" y="217" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"id": "p20"</text>
+<text x="408" y="233" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"section": "Fees"</text>
+<text x="408" y="249" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"text": "Fees: 20. All fees are …"</text>
+<rect x="24" y="286" width="740" height="42" rx="6" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
+<text x="34" y="300.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">The title goes in front of the text: "The interest rate is 0.5%" alone does not say which product it is about.</text>
+<text x="34" y="315.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">h01 … h72 come from the handbook, p01 … p20 from the policies: 92 chunks in all.</text>
+<text x="24" y="352" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">A chunk is the unit that retrieval returns: it must make sense on its own.</text>
+</svg>

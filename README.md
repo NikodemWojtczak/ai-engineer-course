@@ -7,14 +7,16 @@ Every concept is shown three times: **A** — with the plain OpenAI API, from sc
 | Level | Notebook | Status |
 |---|---|---|
 | 1 · Model foundations & the AI Gateway | [`level_1_model_foundations_and_gateway.ipynb`](notebooks/level_1_model_foundations_and_gateway.ipynb) | **ready** — verified end to end against the real API on 2026-10-13 |
-| 2 · Tool calling & structured output | [`level_2_tool_calling_and_structured_output.ipynb`](notebooks/level_2_tool_calling_and_structured_output.ipynb) | **ready** — verified end to end against the real API on 2026-10-13 |
-| 3 · Memory and retrieval | [`level_3_memory_and_retrieval.ipynb`](notebooks/level_3_memory_and_retrieval.ipynb) | **ready** — verified end to end against the real API on 2026-10-13 |
-| 4 · MCP, A2A and Skills | [`level_4_mcp_a2a_and_skills.ipynb`](notebooks/level_4_mcp_a2a_and_skills.ipynb) | **ready** — verified end to end against the real API on 2026-10-13 |
-| 5 · Evals and tracing | [`level_5_evals_and_tracing.ipynb`](notebooks/level_5_evals_and_tracing.ipynb) | **ready** — verified end to end against the real API on 2026-10-13 |
-| 6 · Attack and harden | [`level_6_attack_and_harden.ipynb`](notebooks/level_6_attack_and_harden.ipynb) | **ready** — verified end to end against the real API on 2026-10-13 |
+| 2 · Tool calling & structured output | [`level_2_tool_calling_and_structured_output.ipynb`](notebooks/level_2_tool_calling_and_structured_output.ipynb) | **ready** — verified end to end against the real API on 2026-10-14 |
+| 3 · Memory and retrieval | [`level_3_memory_and_retrieval.ipynb`](notebooks/level_3_memory_and_retrieval.ipynb) | **ready** — verified end to end against the real API on 2026-10-14 |
+| 4 · MCP, A2A and Skills | [`level_4_mcp_a2a_and_skills.ipynb`](notebooks/level_4_mcp_a2a_and_skills.ipynb) | **ready** — verified end to end against the real API on 2026-10-14 |
+| 5 · Evals and tracing | [`level_5_evals_and_tracing.ipynb`](notebooks/level_5_evals_and_tracing.ipynb) | **ready** — verified end to end against the real API on 2026-10-14 |
+| 6 · Attack and harden | [`level_6_attack_and_harden.ipynb`](notebooks/level_6_attack_and_harden.ipynb) | **ready** — verified end to end against the real API on 2026-10-14 |
 
-Take the levels in order. Each notebook rebuilds what it needs from the earlier ones in its Part 0 (the toy gateway,
-the NovaBank data, the agent loop), so it runs on its own, but the text assumes you have read the levels before it.
+Take the levels in order. Each notebook runs on its own: from Level 2 on, what it needs from the earlier levels (the toy
+gateway, the NovaBank data, the agent loop) comes from its helper file `level_N_helpers.py`, next to the notebook. The text
+assumes you have read the levels before it: it does not explain again what an earlier level explained, it says where, e.g.
+"(Level 2, T 1.5)".
 
 ## Quick start
 
@@ -33,18 +35,19 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
 ### What the run needs
 
 - **Models.** The key must have access to `gpt-4.1-mini`, `gpt-4o-mini`, `gpt-6-luna`, `gpt-6.1-sol` and `text-embedding-3-small`.
-  They are used through aliases set in Part 0 of every notebook (`SMALL`, `REASONING`, `LARGE`, `EMBEDDING`), so you can swap
-  them in one place. Level 6 also calls OpenAI's moderation model `omni-moderation-latest`, which is free.
+  They are used through aliases (`SMALL`, `REASONING`, `LARGE`, `EMBEDDING`), set in Part 0 of Level 1 and in
+  `level_N_helpers.py` of Levels 2–6, so you can swap them in one place per level. Level 6 also calls OpenAI's moderation
+  model `omni-moderation-latest`, which is free.
 - **Cost, time and ports.** What one full run took when the author ran it:
 
   | Level | Cost | Time | Ports on `127.0.0.1` |
   |---|---|---|---|
   | 1 | 0.30–0.50 USD | about 3 min | 4010, and 4020 for the optional LiteLLM section |
-  | 2 | 0.02 USD | under 2 min | 4120 |
-  | 3 | 0.03 USD | about 2 min | 4130 |
-  | 4 | 0.02 USD | about 1 min | 4140–4149 |
-  | 5 | 0.12 USD | under 5 min | 4150 |
-  | 6 | 0.01 USD | under 3 min | 4160 |
+  | 2 | 0.02 USD | under 2 min | 5120 |
+  | 3 | 0.03 USD | about 2 min | 5130 |
+  | 4 | 0.03 USD | about 1 min | 5140–5149 |
+  | 5 | 0.12 USD | about 4 min | 5150 |
+  | 6 | 0.01 USD | about 2 min | 5160 |
 
   Most of Level 1's cost is the long-context experiment in Part 7; lower `N_LINES` or `TRIALS_LONG` there to make it cheaper.
   Every notebook runs its own toy gateway inside the kernel (Level 4 also two MCP servers and three A2A agents), each level on
@@ -62,19 +65,26 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
 
 - Run a notebook **top to bottom**; later parts reuse functions and the gateway log from earlier parts.
   To run it again, use *Kernel → Restart Kernel and Run All Cells*.
-- The notebooks come **with the outputs of the author's run** against the real API (one full run per level, all six on
-  2026-10-13), so you can read them — answers, tables and charts — without running them, on GitHub or in Jupyter. Every
-  printed value says what it is: a label before a short value, a `=== title ===` header above a block or a table. When you
-  run one yourself the numbers will differ a little, because the model samples and prices change; the text says "when we
-  ran it" wherever it quotes a measured result, and the arguments never depend on an exact value.
-- Three kinds of cells come back in every part:
+- The notebooks come **with the outputs of the author's run** against the real API (one full run per level: Level 1 on
+  2026-10-13, Levels 2–6 on 2026-10-14), so you can read them — answers, tables and charts — without running them, on
+  GitHub or in Jupyter. Every printed value says what it is: a label before a short value, a `=== title ===` header above
+  a block or a table. When you run one yourself the numbers will differ a little, because the model samples and prices
+  change; the text says "when we ran it" wherever it quotes a measured result, and the arguments never depend on an exact
+  value.
+- **Levels 2–6 put the theory next to the code.** Each part between Part 0 and the recap opens with its use case and a
+  table of what to read and what to run, in order. Then come short theory sections (T 1.1, T 1.2, …), each followed by
+  the examples that show it (Example 1.1, …). An example that solves a problem says so first: **Use case**, **Problem**,
+  **What solves it**. When a cell prints an object, a table under the output explains it field by field.
+- From Level 2 on, Part 0 lists the data and the functions the notebook uses, and in which part; the functions that the
+  notebook needs but does not teach are in `level_N_helpers.py` next to it, and the first cell imports them by name.
+- Two kinds of cells come back through the parts:
   **🔮 Predict** — guess the result before running the next cell;
-  **💥 Break it** — a working example is deliberately broken, then repaired;
-  **🧠 Check yourself** — a question with the answer folded underneath.
-  Each part ends with **📌 Takeaways**.
-- After a definition — a tool, a schema, a helper, a prompt, the test data — a few lines marked `# Try it` often run it
-  once, without the model, so you see what goes in and what comes out before an agent uses it. A section number in
-  brackets, such as "(0.5)", tells you where a name you meet was defined.
+  **💥 Break it** — a working example is deliberately broken, then repaired.
+  Level 1 also has **🧠 Check yourself** — a question with the answer folded underneath. Each part ends with
+  **📌 Takeaways**.
+- In Level 1, after a definition — a tool, a schema, a helper, a prompt, the test data — a few lines marked `# Try it`
+  often run it once, without the model, so you see what goes in and what comes out before an agent uses it. A section
+  number in brackets, such as "(0.5)", tells you where a name you meet was defined.
 - From Level 2 on, each idea is built by hand first and then with LangChain + LangGraph and with Agno. **Open the box** shows what each
   version actually sent through the gateway, and **New word, same idea** maps the framework names to what you built by hand.
 - The examples use a fictional bank, **NovaBank**, and fictional customers. Keep it that way: everything the notebook sends
@@ -111,7 +121,7 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
 | 3 · Structured output | from free text to JSON mode to a strict JSON schema; a schema strict mode rejects; Pydantic; a failed validation sent back to the model |
 | 4 · Tool design | look-alike tools — the description decides; typed arguments and enums; errors the model can act on; a confirmation step before a refund; what the tool schemas cost on every call |
 | 5 · Three layers | one support agent written three times (plain API, LangChain + LangGraph, Agno); what each one sent through the gateway; one failure in three layers |
-| 6 · Recap | the one idea once more, glossary, quiz, what comes next |
+| 6 · Recap | the one idea once more, glossary, clean up |
 
 ## Level 3 at a glance
 
@@ -122,7 +132,7 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
 | 2 · Long-term memory | a table of facts with their source; one sentence that poisons every later session; a label in the prompt vs a rule in code; LangGraph's store; Agno's user memories and what they do not record |
 | 3 · Retrieval | the whole corpus vs three passages; embeddings, BM25 and hybrid search measured with recall@3; a miss you cannot see in the answer; a reranker; answers with citations; search as a tool in LangChain and Agno |
 | 4 · The context layout | one request built from budgeted blocks; stable blocks first so the provider's cache works, and what breaks it |
-| 5 · Recap | the mental model once more, glossary, quiz, what comes next |
+| 5 · Recap | the one idea once more, glossary, clean up |
 
 ## Level 4 at a glance
 
@@ -134,7 +144,7 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
 | 3 · A2A | another team's agent called by hand; a card that promises too much; the A2A SDK around a LangGraph agent; Agno's AgentOS; an Agno client that silently drops the SDK server's answer; who pays for which call |
 | 4 · Skills | an agent that does not know the procedure; a catalog in the prompt and the steps on demand; a look-alike skill; the same in LangChain + LangGraph; Agno's built-in skills measured against our version |
 | 5 · Putting it together | one request that uses an MCP tool, the lending agent and a skill; which one to choose when |
-| 6 · Recap | the mental model once more, glossary, quiz, what comes next |
+| 6 · Recap | the one idea once more, glossary, clean up |
 
 ## Level 5 at a glance
 
@@ -147,7 +157,7 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
 | 4 · Outcome evals and pass^k | a booking tool that silently loses every fourth booking, and the only grader that sees it; a grader with a bug; pass@k vs pass^k; the repair: read after write |
 | 5 · Tracing | one trace id from the agent to the gateway; a span for every step; the forgotten inject; LangChain and Agno with an instrumentor; the same span in three dialects |
 | 6 · The harness | three agents on the same 30 tasks, twice, in one table with cost and time per run; the model behind an alias changes; a grader that crashes; what to look at first when a number drops |
-| 7 · Recap | the mental model once more, glossary, quiz, what comes next |
+| 7 · Recap | the one idea once more, glossary, clean up |
 
 ## Level 6 at a glance
 
@@ -161,12 +171,13 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
 | 5 · Human approval | approve the arguments, not the summary; approval fatigue; "don't ask again" scoped too loosely; LangChain's `HumanInTheLoopMiddleware` and Agno's `requires_confirmation` |
 | 6 · Guardrails | a regex, an LLM classifier and moderation scored on 20 attacks and 20 benign messages; base64 walks past them; the output guard; a guard on the gateway; the same in LangChain and Agno |
 | 7 · Structural defences | spotlighting; plan-then-execute; the dual-LLM pattern; a defence map |
-| 8 · Harden, measure, recap | all the layers in one agent; attacks and benign tasks scored before and after; the OWASP LLM Top 10; glossary and quiz |
+| 8 · Harden, measure, recap | all the layers in one agent; attacks and benign tasks scored before and after; the OWASP LLM Top 10; the one idea once more, glossary, clean up |
 
 ## What is in this repository
 
 ```
-notebooks/                 the notebooks (with the author's outputs) and img/ with their diagrams
+notebooks/                 the notebooks (with the author's outputs), level_N_helpers.py (the functions Levels 2–6
+                           import) and img/ with their diagrams
 pyproject.toml, uv.lock    the pinned environment the notebooks were verified with; .python-version pins Python 3.12
 .env.example               template for your .env
 ```

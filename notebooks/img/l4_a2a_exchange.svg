@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="386" viewBox="0 0 780 386" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="386" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">A remote agent as one more tool</text>
+<rect x="24" y="44" width="250" height="300" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="38" y="64" font-size="12.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">our team: the support agent</text>
+<rect x="38" y="82" width="222" height="42" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="149.0" y="95.0" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">our model</text>
+<text x="149.0" y="112.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">sees ask_lending_agent as a tool</text>
+<rect x="38" y="136" width="222" height="42" rx="6" fill="#ffffff" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="149.0" y="149.0" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">ask_lending_agent</text>
+<text x="149.0" y="166.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">sends the question, returns the answer</text>
+<rect x="38" y="190" width="222" height="42" rx="6" fill="#ffffff" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="149.0" y="203.0" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">our key: sk-team-support</text>
+<text x="149.0" y="220.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">pays for our model calls</text>
+<rect x="506" y="44" width="250" height="300" rx="6" fill="#ece6f8" stroke="#7b5cc4" stroke-width="1.2"/>
+<text x="520" y="64" font-size="12.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">lending team: the lending agent</text>
+<rect x="520" y="82" width="222" height="42" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="631.0" y="95.0" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">its prompt and its model</text>
+<text x="631.0" y="112.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">LENDING_PROMPT, its own loop</text>
+<rect x="520" y="136" width="222" height="42" rx="6" fill="#ffffff" stroke="#7b5cc4" stroke-width="1.2"/>
+<text x="631.0" y="149.0" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">its tools and data</text>
+<text x="631.0" y="166.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">search_handbook, the loan sections</text>
+<rect x="520" y="190" width="222" height="42" rx="6" fill="#ffffff" stroke="#7b5cc4" stroke-width="1.2"/>
+<text x="631.0" y="203.0" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">its key: sk-team-lending</text>
+<text x="631.0" y="220.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">pays for its model calls</text>
+<rect x="38" y="250" width="222" height="57" rx="6" fill="#ffffff" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="48" y="264.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">our model sees: the card, as a</text>
+<text x="48" y="279.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">tool description; the question</text>
+<text x="48" y="294.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">it wrote; the answer</text>
+<rect x="520" y="250" width="222" height="57" rx="6" fill="#ffffff" stroke="#7b5cc4" stroke-width="1.2"/>
+<text x="530" y="264.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">stays here: its prompt, the</text>
+<text x="530" y="279.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">handbook sections, its tool</text>
+<text x="530" y="294.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">calls, its bill</text>
+<line x1="274" y1="100" x2="506" y2="100" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="390.0" y="91" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">GET the card</text>
+<text x="390.0" y="112" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">/.well-known/agent-card.json</text>
+<line x1="506" y1="150" x2="274" y2="150" stroke="#52514e" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+<text x="390.0" y="141" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the agent card</text>
+<text x="390.0" y="162" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">name, description, skills, url</text>
+<line x1="274" y1="214" x2="506" y2="214" stroke="#7b5cc4" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="390.0" y="205" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">message/send</text>
+<text x="390.0" y="226" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the question, as text</text>
+<line x1="506" y1="270" x2="274" y2="270" stroke="#7b5cc4" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+<text x="390.0" y="261" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">a message (or a task)</text>
+<text x="390.0" y="282" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the answer, as text</text>
+<text x="24" y="366" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Only the question and the answer cross. Behind the answer runs a whole agent, with its own loop and its own bill.</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="450" viewBox="0 0 780 450" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="450" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">One eval: from a task to a row of the report</text>
+<rect x="24" y="48" width="236" height="115" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="34" y="63" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">task (one of 30)</text>
+<text x="34" y="84" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">id</text>
+<text x="132" y="84" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"r1"</text>
+<text x="34" y="101" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">kind</text>
+<text x="132" y="101" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"rag"</text>
+<text x="34" y="118" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">input</text>
+<text x="132" y="118" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"What is the daily…"</text>
+<text x="34" y="135" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">reference</text>
+<text x="132" y="135" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"5000"</text>
+<text x="34" y="152" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">expected_tools</text>
+<text x="132" y="152" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">["search_handbook"]</text>
+<rect x="292" y="66" width="160" height="80" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="372.0" y="90.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">system under test</text>
+<text x="372.0" y="107.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">run_agent(input)</text>
+<text x="372.0" y="122.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">the agent of Part 0</text>
+<line x1="260" y1="106" x2="290" y2="106" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="488" y="48" width="268" height="98" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="498" y="63" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">output</text>
+<text x="498" y="84" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">answer</text>
+<text x="568" y="84" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"The daily transfer limit…"</text>
+<text x="498" y="101" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">messages</text>
+<text x="568" y="101" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">[system, user,</text>
+<text x="498" y="118" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace"></text>
+<text x="568" y="118" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace"> assistant (tool_calls),</text>
+<text x="498" y="135" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace"></text>
+<text x="568" y="135" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace"> tool, assistant]</text>
+<line x1="452" y1="106" x2="486" y2="106" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="292" y="214" width="160" height="80" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="372.0" y="238.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">grader</text>
+<text x="372.0" y="255.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">grade(task, output)</text>
+<text x="372.0" y="270.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">→ score, comment</text>
+<path d="M 540 146 C 540 186, 420 180, 420 212" fill="none" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<path d="M 142 163 C 142 200, 330 184, 330 212" fill="none" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="552" y="172" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the output</text>
+<text x="244" y="176" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the reference</text>
+<rect x="488" y="196" width="268" height="132" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="498" y="211" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">one row of the results</text>
+<text x="498" y="232" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">id, kind</text>
+<text x="568" y="232" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"r1", "rag"</text>
+<text x="498" y="249" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">score</text>
+<text x="568" y="249" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">1.0  (or 0.0, None)</text>
+<text x="498" y="266" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">comment</text>
+<text x="568" y="266" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"found 5000"</text>
+<text x="498" y="283" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">cost</text>
+<text x="568" y="283" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">0.00021 USD</text>
+<text x="498" y="300" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">seconds</text>
+<text x="568" y="300" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">1.9</text>
+<text x="498" y="317" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">version</text>
+<text x="568" y="317" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"evalset-v1"</text>
+<line x1="452" y1="254" x2="486" y2="254" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="24" y="334" width="732" height="58" rx="6" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
+<text x="36" y="352" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the report: one row per kind</text>
+<text x="36" y="374" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">classify 14/14 = 100 % · rag 6/6 · abstain 2/2 · cost per task · seconds per task · evalset-v1</text>
+<text x="24" y="414" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">An eval is a function from (input, output, reference) to a score with a comment. Run it over the task set, keep every row,</text>
+<text x="24" y="430" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">and report the pass rate with its n, its cost and the version of the set.</text>
+</svg>

@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="326" viewBox="0 0 780 326" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="326" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">Position bias: ask both orders</text>
+<text x="24" y="75" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">order 1</text>
+<rect x="96" y="52" width="196" height="46" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="194.0" y="67.0" font-size="11.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">position A</text>
+<text x="194.0" y="84.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">① "The limit is 5000 EUR."</text>
+<rect x="300" y="52" width="196" height="46" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="398.0" y="67.0" font-size="11.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">position B</text>
+<text x="398.0" y="84.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">② "It is 5000 EUR a day."</text>
+<line x1="498" y1="75" x2="544" y2="75" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="546" y="52" width="210" height="46" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="651.0" y="67.0" font-size="11.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the judge: "B"</text>
+<text x="651.0" y="84.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">so answer ② wins</text>
+<text x="24" y="159" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">order 2</text>
+<rect x="96" y="136" width="196" height="46" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="194.0" y="151.0" font-size="11.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">position A</text>
+<text x="194.0" y="168.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">② "It is 5000 EUR a day."</text>
+<rect x="300" y="136" width="196" height="46" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="398.0" y="151.0" font-size="11.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">position B</text>
+<text x="398.0" y="168.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">① "The limit is 5000 EUR."</text>
+<line x1="498" y1="159" x2="544" y2="159" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="546" y="136" width="210" height="46" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="651.0" y="151.0" font-size="11.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the judge: "B"</text>
+<text x="651.0" y="168.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">so answer ① wins</text>
+<rect x="24" y="236" width="356" height="42" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="34" y="250.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Consistent: the same answer wins in both orders.</text>
+<text x="34" y="265.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">→ keep the verdict.</text>
+<rect x="400" y="236" width="356" height="42" rx="6" fill="#fbe3e3" stroke="#d23c3c" stroke-width="1.2"/>
+<text x="410" y="250.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Flips (as here): the judge picked a position,</text>
+<text x="410" y="265.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">not an answer. → count it as EQUAL (a tie).</text>
+<text x="24" y="306" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Ask twice with the order swapped. A verdict is kept only if it names the same answer both times; let the judge say EQUAL.</text>
+</svg>

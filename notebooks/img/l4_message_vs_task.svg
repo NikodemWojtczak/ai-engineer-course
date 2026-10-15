@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="506" viewBox="0 0 780 506" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="506" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">The answer to message/send: a message or a task</text>
+<rect x="290" y="42" width="200" height="40" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="390.0" y="54.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">message/send</text>
+<text x="390.0" y="71.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">params.message: role user, parts</text>
+<path d="M 340 82 C 340 104, 190 96, 190 118" fill="none" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<path d="M 440 82 C 440 104, 590 96, 590 118" fill="none" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="24" y="120" width="332" height="186" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="40" y="140" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">result.kind = "message"</text>
+<text x="40" y="158" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">an answer at once: no state</text>
+<rect x="40" y="172" width="300" height="85" rx="4" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="48" y="185.5" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"kind": "message",</text>
+<text x="48" y="200.5" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"messageId": "…",</text>
+<text x="48" y="215.5" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"role": "agent",</text>
+<text x="48" y="230.5" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"parts": [{"kind": "text",</text>
+<text x="48" y="245.5" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">           "text": "&lt;the answer&gt;"}]</text>
+<text x="40" y="268" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the text: parts[0].text</text>
+<text x="40" y="286" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">our server, the SDK server</text>
+<rect x="424" y="120" width="332" height="186" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="440" y="140" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">result.kind = "task"</text>
+<text x="440" y="158" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">work with an id, a state and a history</text>
+<rect x="440" y="172" width="300" height="85" rx="4" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="448" y="185.5" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"kind": "task", "id": "…",</text>
+<text x="448" y="200.5" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"contextId": "…",</text>
+<text x="448" y="215.5" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"status": {"state": "completed",</text>
+<text x="448" y="230.5" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">           "message": {…}},</text>
+<text x="448" y="245.5" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"history": [{…}], "artifacts": [{…}]</text>
+<text x="440" y="268" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the text: status.message, history, artifacts</text>
+<text x="440" y="286" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">AgentOS, the quote desk</text>
+<text x="24" y="334" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">The states of a task</text>
+<rect x="24" y="352" width="72.59" height="20" rx="10" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="60.295" y="362.5" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">submitted</text>
+<rect x="136" y="352" width="59.57" height="20" rx="10" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="165.785" y="362.5" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">working</text>
+<rect x="362" y="352" width="72.59" height="20" rx="10" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="398.295" y="362.5" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">completed</text>
+<rect x="474" y="352" width="53.06" height="20" rx="10" fill="#fbe3e3" stroke="#d23c3c" stroke-width="1.2"/>
+<text x="500.53" y="362.5" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">failed</text>
+<rect x="554" y="352" width="66.08" height="20" rx="10" fill="#fbe3e3" stroke="#d23c3c" stroke-width="1.2"/>
+<text x="587.04" y="362.5" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">canceled</text>
+<rect x="650" y="352" width="66.08" height="20" rx="10" fill="#fbe3e3" stroke="#d23c3c" stroke-width="1.2"/>
+<text x="683.04" y="362.5" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">rejected</text>
+<line x1="110" y1="362" x2="134" y2="362" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="206" y1="362" x2="360" y2="362" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<path d="M 180 372 C 180 404, 230 410, 236 410" fill="none" stroke="#52514e" stroke-width="1.4"/>
+<rect x="238" y="400" width="105.14" height="20" rx="10" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
+<text x="290.57" y="410.5" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">input-required</text>
+<rect x="238" y="430" width="98.63" height="20" rx="10" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
+<text x="287.315" y="440.5" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">auth-required</text>
+<path d="M 180 372 C 180 430, 220 440, 236 440" fill="none" stroke="#52514e" stroke-width="1.4"/>
+<text x="370" y="410" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">waits for the client, then goes on working</text>
+<text x="370" y="440" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">waits for the client to authenticate</text>
+<text x="474" y="386" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">final: ended without a result</text>
+<rect x="24" y="466" width="732" height="27" rx="6" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
+<text x="34" y="480.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Both shapes are valid A2A, and a server may pick either: a client must read both, and a task's state before its text.</text>
+</svg>

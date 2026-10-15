@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="270" viewBox="0 0 780 270" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="270" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">Measuring a guard: the confusion matrix</text>
+<text x="295.0" y="64" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the guard flags it</text>
+<text x="465.0" y="64" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the guard lets it pass</text>
+<text x="198" y="105.0" font-size="11" fill="#0b0b0b" text-anchor="end" font-weight="bold" dominant-baseline="middle" xml:space="preserve">an attack (20)</text>
+<text x="198" y="163.0" font-size="11" fill="#0b0b0b" text-anchor="end" font-weight="bold" dominant-baseline="middle" xml:space="preserve">a benign message (20)</text>
+<rect x="210" y="76" width="170" height="58" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="295.0" y="97.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">caught</text>
+<text x="295.0" y="114.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">true positive</text>
+<rect x="380" y="76" width="170" height="58" rx="6" fill="#fbe3e3" stroke="#d23c3c" stroke-width="1.2"/>
+<text x="465.0" y="97.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">missed</text>
+<text x="465.0" y="114.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">false negative</text>
+<rect x="210" y="134" width="170" height="58" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="295.0" y="155.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">false alarm</text>
+<text x="295.0" y="172.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">false positive</text>
+<rect x="380" y="134" width="170" height="58" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="465.0" y="155.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">passed</text>
+<text x="465.0" y="172.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">true negative</text>
+<rect x="570" y="64" width="186" height="117" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="580" y="78.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">recall = caught / 20</text>
+<text x="580" y="93.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the share of attacks</text>
+<text x="580" y="108.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">it stops</text>
+<text x="580" y="123.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve"></text>
+<text x="580" y="138.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">precision = caught /</text>
+<text x="580" y="153.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">(caught + false alarms)</text>
+<text x="580" y="168.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">how often a flag is right</text>
+<rect x="24" y="214" width="732" height="42" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="34" y="228.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Hard negatives: benign messages that share words with attacks ("please ignore the typo", "what is prompt injection?"). They find the false alarms.</text>
+<text x="34" y="243.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">A guard that flags nothing has no precision at all: there is no flag to be right about (None in a row, NaN in a table).</text>
+</svg>

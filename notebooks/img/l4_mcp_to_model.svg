@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="496" viewBox="0 0 780 496" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="496" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">From MCP to the model, and back</text>
+<rect x="20.0" y="44" width="180" height="44" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="110.0" y="58.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the model</text>
+<text x="110.0" y="75.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">reads tool definitions</text>
+<line x1="110" y1="88" x2="110" y2="450" stroke="#c3c2b7" stroke-width="1.2" stroke-dasharray="4 4"/>
+<rect x="290.0" y="44" width="200" height="44" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="390.0" y="58.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">our client</text>
+<text x="390.0" y="75.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">connect_mcp, call_mcp_tool</text>
+<line x1="390" y1="88" x2="390" y2="450" stroke="#c3c2b7" stroke-width="1.2" stroke-dasharray="4 4"/>
+<rect x="580.0" y="44" width="180" height="44" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="670.0" y="58.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">MCP server</text>
+<text x="670.0" y="75.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">tools/list, tools/call</text>
+<line x1="670" y1="88" x2="670" y2="450" stroke="#c3c2b7" stroke-width="1.2" stroke-dasharray="4 4"/>
+<circle cx="479.0" cy="103" r="10" fill="#0b0b0b"/>
+<text x="479.0" y="103.5" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">1</text>
+<line x1="390" y1="112" x2="670" y2="112" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="530.0" y="103" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">tools/list</text>
+<line x1="670" y1="158" x2="390" y2="158" stroke="#52514e" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+<text x="530.0" y="149" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">each tool: name, description, inputSchema</text>
+<text x="530.0" y="170" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">get_balance · "Return the balance …" · {"account_id": …}</text>
+<circle cx="179.2" cy="201" r="10" fill="#0b0b0b"/>
+<text x="179.2" y="201.5" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">2</text>
+<line x1="390" y1="210" x2="110" y2="210" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="250.0" y="201" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">tool definitions</text>
+<text x="250.0" y="222" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">function.name, .description,</text>
+<text x="250.0" y="236" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">.parameters = inputSchema</text>
+<circle cx="195.7" cy="265" r="10" fill="#0b0b0b"/>
+<text x="195.7" y="265.5" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">3</text>
+<line x1="110" y1="274" x2="390" y2="274" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="250.0" y="265" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">a tool call</text>
+<text x="250.0" y="286" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">get_balance, arguments as a string:</text>
+<text x="250.0" y="300" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"{\"account_id\": \"A-1001\"}"</text>
+<circle cx="479.0" cy="329" r="10" fill="#0b0b0b"/>
+<text x="479.0" y="329.5" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">4</text>
+<line x1="390" y1="338" x2="670" y2="338" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="530.0" y="329" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">tools/call</text>
+<text x="530.0" y="350" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">name "get_balance",</text>
+<text x="530.0" y="364" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">arguments {"account_id": "A-1001"}</text>
+<line x1="670" y1="392" x2="390" y2="392" stroke="#52514e" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
+<text x="530.0" y="383" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">result: content[0].text, isError</text>
+<text x="530.0" y="404" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">{"account_id": "A-1001", …}</text>
+<circle cx="179.2" cy="423" r="10" fill="#0b0b0b"/>
+<text x="179.2" y="423.5" font-size="11" fill="#ffffff" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">5</text>
+<line x1="390" y1="432" x2="110" y2="432" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="250.0" y="423" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the tool message</text>
+<text x="250.0" y="444" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">content = that text</text>
+<text x="24" y="476" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">The loop of Part 0 does not change: the model still reads tool definitions and tool messages. Only the client knows MCP.</text>
+</svg>

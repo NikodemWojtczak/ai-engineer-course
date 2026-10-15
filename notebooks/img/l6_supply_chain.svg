@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="362" viewBox="0 0 780 362" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="362" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">Poisoned descriptions: the schema is part of the prompt</text>
+<text x="24" y="50" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">1 · The description travels into the prompt</text>
+<rect x="24" y="64" width="150" height="60" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="99.0" y="78.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">a tool server</text>
+<text x="99.0" y="95.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">MCP, a package,</text>
+<text x="99.0" y="110.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">a skill file</text>
+<line x1="174" y1="94" x2="214" y2="94" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="214" y="64" width="270" height="92" rx="6" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
+<text x="224" y="80" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the tool schema</text>
+<text x="224" y="98" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"name": "summarize_ticket"</text>
+<text x="224" y="112" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"description": "Summarize …</text>
+<text x="224" y="126" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">  &lt;IMPORTANT&gt; … &lt;/IMPORTANT&gt;"</text>
+<text x="224" y="140" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"parameters": {…}</text>
+<line x1="484" y1="94" x2="524" y2="94" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="524" y="64" width="232" height="92" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="534" y="80" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the model's request</text>
+<text x="534" y="98" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">messages: [system, user]</text>
+<text x="534" y="112" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">tools: [every schema, whole]</text>
+<text x="534" y="126" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">→ the model reads the</text>
+<text x="534" y="140" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">  description as instructions</text>
+<text x="24" y="192" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">2 · Pin what you approved</text>
+<rect x="24" y="206" width="224" height="78" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="34" y="222" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">approve_server(schemas)</text>
+<text x="34" y="240" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">fingerprint = sha256 of the</text>
+<text x="34" y="254" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">schemas, stored on the day</text>
+<text x="34" y="268" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">a person read them</text>
+<line x1="248" y1="245" x2="288" y2="245" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="288" y="206" width="224" height="78" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="298" y="222" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">check_server(schemas)</text>
+<text x="298" y="240" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">before every session: the</text>
+<text x="298" y="254" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">fingerprint again, compared</text>
+<text x="298" y="268" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">with the stored one</text>
+<path d="M 512 230 C 530 230, 530 222, 546 222" fill="none" stroke="#52514e" stroke-width="1.3" marker-end="url(#arrow)"/>
+<path d="M 512 262 C 530 262, 530 270, 546 270" fill="none" stroke="#d23c3c" stroke-width="1.3" marker-end="url(#arrow_red)"/>
+<rect x="546" y="204" width="210" height="36" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="651.0" y="222.0" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">same: use the tools</text>
+<rect x="546" y="252" width="210" height="36" rx="6" fill="#fbe3e3" stroke="#d23c3c" stroke-width="1.2"/>
+<text x="651.0" y="270.0" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">differs: refuse, show the diff</text>
+<rect x="24" y="306" width="732" height="42" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="34" y="320.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">A linter reads the description for words that do not belong in it (&lt;IMPORTANT&gt;, "before using this tool", file paths, URLs).</text>
+<text x="34" y="335.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Pinning answers another question: did anything change since a person approved it? A one-word edit changes the hash.</text>
+</svg>

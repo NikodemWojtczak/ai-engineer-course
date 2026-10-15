@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="246" viewBox="0 0 780 246" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="246" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">Assume breach: permissions × data × exits</text>
+<rect x="24" y="56" width="160" height="76" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="104.0" y="78.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">permissions</text>
+<text x="104.0" y="95.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">which tools, which</text>
+<text x="104.0" y="110.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">arguments, which role</text>
+<text x="104" y="150" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">get_staff_discount, send_email</text>
+<text x="202" y="94" font-size="22" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">×</text>
+<rect x="220" y="56" width="160" height="76" rx="6" fill="#ece6f8" stroke="#7b5cc4" stroke-width="1.2"/>
+<text x="300.0" y="78.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">data</text>
+<text x="300.0" y="95.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">what those tools</text>
+<text x="300.0" y="110.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">can read</text>
+<text x="300" y="150" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">the staff code</text>
+<text x="398" y="94" font-size="22" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">×</text>
+<rect x="416" y="56" width="160" height="76" rx="6" fill="#fbe3e3" stroke="#d23c3c" stroke-width="1.2"/>
+<text x="496.0" y="78.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">exits</text>
+<text x="496.0" y="95.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">where text can leave:</text>
+<text x="496.0" y="110.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">mail, URL, the reply</text>
+<text x="496" y="150" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">send_email to any address</text>
+<text x="611" y="94" font-size="22" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">=</text>
+<rect x="630" y="56" width="126" height="76" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="693.0" y="78.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">blast radius</text>
+<text x="693.0" y="95.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">what a breached</text>
+<text x="693.0" y="110.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">agent can do</text>
+<text x="693" y="150" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">the code, mailed out</text>
+<rect x="24" y="176" width="732" height="57" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="34" y="190.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Assume the model gives in, and ask what it can reach then. Each factor is in your code, not in the model.</text>
+<text x="34" y="205.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Make any factor zero and the product is zero: no secret tool, or no exit, or no permission for the exit.</text>
+<text x="34" y="220.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">The examples under the boxes are the agent of Part 1: two tools, one secret, one open exit.</text>
+</svg>

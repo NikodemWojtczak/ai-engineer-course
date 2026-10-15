@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="364" viewBox="0 0 780 364" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="364" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">The harness: three agents, one table</text>
+<rect x="24" y="52" width="180" height="50" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="114.0" y="69.0" font-size="11.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">A · plain OpenAI API</text>
+<text x="114.0" y="86.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">run_agent_traced</text>
+<line x1="206" y1="77" x2="250" y2="138" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="24" y="114" width="180" height="50" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="114.0" y="131.0" font-size="11.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">B · LangChain</text>
+<text x="114.0" y="148.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">run_agent_b</text>
+<line x1="206" y1="139" x2="250" y2="138" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="24" y="176" width="180" height="50" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="114.0" y="193.0" font-size="11.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">C · Agno</text>
+<text x="114.0" y="210.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">run_agent_c</text>
+<line x1="206" y1="201" x2="250" y2="138" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="252" y="104" width="170" height="68" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="337.0" y="122.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">collect</text>
+<text x="337.0" y="139.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">30 tasks × n = 2</text>
+<text x="337.0" y="154.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">in parallel, traced</text>
+<line x1="424" y1="138" x2="460" y2="138" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="462" y="104" width="130" height="68" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="527.0" y="122.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">grade</text>
+<text x="527.0" y="139.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">one grader</text>
+<text x="527.0" y="154.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">per kind of task</text>
+<line x1="594" y1="138" x2="626" y2="138" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="628" y="52" width="128" height="172" rx="6" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
+<text x="692" y="64" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">one row per run</text>
+<text x="692" y="79" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">and grader</text>
+<text x="640" y="104" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">agent</text>
+<text x="640" y="122" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">task, kind, run</text>
+<text x="640" y="140" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">grader</text>
+<text x="640" y="158" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">score, comment</text>
+<text x="640" y="176" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">cost, seconds</text>
+<text x="640" y="194" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">trace_id</text>
+<rect x="24" y="250" width="732" height="70" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="36" y="268" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the table people read: per agent</text>
+<text x="36" y="290" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">agent · pass rate per kind (k/n) · USD per run · seconds per run</text>
+<text x="36" y="308" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">a failing row keeps its trace_id: one click from the score to the call tree that explains it</text>
+<text x="24" y="344" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Same tasks, same graders, same gateway: the only thing that changes is the agent, so the difference in the table is its own.</text>
+</svg>

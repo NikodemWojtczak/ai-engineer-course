@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="362" viewBox="0 0 780 362" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="362" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">Constrained decoding: the schema decides which tokens are allowed</text>
+<text x="24" y="52" font-size="11" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">written so far:</text>
+<rect x="130" y="38" width="380" height="28" rx="4" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="140" y="52.5" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">{"category":"CARD","priority":"</text>
+<line x1="374" y1="44" x2="374" y2="61" stroke="#0b0b0b" stroke-width="2"/>
+<text x="24" y="92" font-size="11" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the next token: the model's candidates and their probabilities (made-up numbers)</text>
+<text x="150" y="114" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">before: what the model prefers</text>
+<text x="470" y="114" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">after the mask: what can be chosen</text>
+<text x="24" y="141" font-size="12" fill="#d23c3c" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"High"</text>
+<rect x="150" y="132" width="213.2" height="18" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="369.2" y="141.5" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">0.41</text>
+<line x1="20" y1="141" x2="100" y2="141" stroke="#d23c3c" stroke-width="1.5"/>
+<text x="470" y="141.5" font-size="10.5" fill="#d23c3c" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">removed: the schema allows only P1, P2, P3 here</text>
+<text x="24" y="169" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"P1"</text>
+<rect x="150" y="160" width="171.6" height="18" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="327.6" y="169.5" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">0.33</text>
+<rect x="470" y="160" width="199.53488372093022" height="18" rx="3" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="675.5348837209302" y="169.5" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">0.77</text>
+<text x="24" y="197" font-size="12" fill="#d23c3c" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"urgent"</text>
+<rect x="150" y="188" width="62.4" height="18" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="218.4" y="197.5" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">0.12</text>
+<line x1="20" y1="197" x2="100" y2="197" stroke="#d23c3c" stroke-width="1.5"/>
+<text x="470" y="197.5" font-size="10.5" fill="#d23c3c" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">removed: the schema allows only P1, P2, P3 here</text>
+<text x="24" y="225" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"P2"</text>
+<rect x="150" y="216" width="36.400000000000006" height="18" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="192.4" y="225.5" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">0.07</text>
+<rect x="470" y="216" width="42.325581395348834" height="18" rx="3" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="518.3255813953489" y="225.5" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">0.16</text>
+<text x="24" y="253" font-size="12" fill="#d23c3c" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"1"</text>
+<rect x="150" y="244" width="20.8" height="18" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="176.8" y="253.5" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">0.04</text>
+<line x1="20" y1="253" x2="100" y2="253" stroke="#d23c3c" stroke-width="1.5"/>
+<text x="470" y="253.5" font-size="10.5" fill="#d23c3c" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">removed: the schema allows only P1, P2, P3 here</text>
+<text x="24" y="281" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"P3"</text>
+<rect x="150" y="272" width="15.6" height="18" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="171.6" y="281.5" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">0.03</text>
+<rect x="470" y="272" width="18.139534883720927" height="18" rx="3" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="494.1395348837209" y="281.5" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">0.07</text>
+<rect x="24" y="306" width="732" height="42" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="34" y="320.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">The API turns the schema into a grammar before the model writes. At every token it removes the candidates that would break the grammar,</text>
+<text x="34" y="335.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">then the model chooses among the rest. That is why a strict answer always parses, and why the schema must be fixed in advance (every key required).</text>
+</svg>

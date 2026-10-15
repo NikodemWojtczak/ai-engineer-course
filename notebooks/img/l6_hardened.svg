@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="266" viewBox="0 0 780 266" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="266" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">Hardening the support agent: v1 against v2</text>
+<text x="24" y="50" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">An attack on v2 has to pass every layer, in this order:</text>
+<rect x="24" y="64" width="136" height="58" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="92.0" y="85.0" font-size="11.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">fewer tools</text>
+<text x="92.0" y="102.0" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">V2_TOOLS: no fetch_url</text>
+<line x1="160" y1="93" x2="172" y2="93" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="172" y="64" width="136" height="58" rx="6" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
+<text x="240.0" y="85.0" font-size="11.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">spotlight</text>
+<text x="240.0" y="102.0" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">tool results in tags + the rule</text>
+<line x1="308" y1="93" x2="320" y2="93" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="320" y="64" width="136" height="58" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="388.0" y="85.0" font-size="11.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">policy_check</text>
+<text x="388.0" y="102.0" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">no external mail, no refund</text>
+<line x1="456" y1="93" x2="468" y2="93" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="468" y="64" width="136" height="58" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="536.0" y="85.0" font-size="11.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">approve_call</text>
+<text x="536.0" y="102.0" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">only on "ask": never here</text>
+<line x1="604" y1="93" x2="616" y2="93" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="616" y="64" width="136" height="58" rx="6" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
+<text x="684.0" y="85.0" font-size="11.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">output_guard</text>
+<text x="684.0" y="102.0" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">never emit the canary</text>
+<rect x="24" y="146" width="360" height="78" rx="6" fill="#fbe3e3" stroke="#d23c3c" stroke-width="1.2"/>
+<text x="34" y="162" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">containment: assume breach</text>
+<text x="34" y="180" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">12 attacks on compromised_model, the stub that</text>
+<text x="34" y="194" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">always obeys: did the secret leave? did an</text>
+<text x="34" y="208" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">unapproved irreversible action run?</text>
+<rect x="396" y="146" width="360" height="78" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="406" y="162" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">usability: does it still work?</text>
+<text x="406" y="180" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">12 benign questions on the real gpt-4.1-mini:</text>
+<text x="406" y="194" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">did each get an answer, with no tool call</text>
+<text x="406" y="208" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">denied by mistake?</text>
+<text x="24" y="246" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">v1 is the same agent with no layers. The same two instruments measure both, so the difference is the layers.</text>
+</svg>

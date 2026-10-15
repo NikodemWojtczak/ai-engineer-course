@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="400" viewBox="0 0 780 400" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="400" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">Embeddings: meaning as a direction</text>
+<path d="M 360 300 A 220 220 0 0 0 140 80" fill="none" stroke="#c3c2b7" stroke-width="1.2" stroke-dasharray="4 4"/>
+<line x1="130" y1="300" x2="390" y2="300" stroke="#898781" stroke-width="1.2"/>
+<line x1="140" y1="310" x2="140" y2="60" stroke="#898781" stroke-width="1.2"/>
+<line x1="140" y1="300" x2="275.4455245716448" y2="126.63763420652117" stroke="#2a78d6" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="283.4455245716448" y="120.63763420652117" font-size="10.5" fill="#2a78d6" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">question: "cash machine per day, Youth?"</text>
+<line x1="140" y1="300" x2="298.25475607450323" y2="147.1751584990206" stroke="#7b5cc4" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="306.25475607450323" y="141.1751584990206" font-size="10.5" fill="#7b5cc4" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">h19: "… daily ATM withdrawal limit …"</text>
+<line x1="140" y1="300" x2="356.65770566268577" y2="261.79740091327534" stroke="#898781" stroke-width="2" marker-end="url(#arrow)"/>
+<text x="364.65770566268577" y="255.79740091327534" font-size="10.5" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">p16: "An urgent same-day …"</text>
+<path d="M 190.3537860237056 251.3739140678702 A 70 70 0 0 0 183.0963032727961 244.83924724752944" fill="none" stroke="#0b0b0b" stroke-width="1.2"/>
+<rect x="540" y="226" width="224" height="57" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="550" y="240.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">cos(angle) = a · b / (|a| · |b|)</text>
+<text x="550" y="255.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">With |a| = |b| = 1 it is just a · b,</text>
+<text x="550" y="270.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the sum of a[i] × b[i].</text>
+<rect x="540" y="292" width="224" height="57" rx="6" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
+<text x="550" y="306.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">1: the same direction, similar meaning</text>
+<text x="550" y="321.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">0: unrelated</text>
+<text x="550" y="336.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">The ranking sorts by it, largest first.</text>
+<rect x="540" y="158" width="224" height="42" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="550" y="172.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">question and h19: a small angle,</text>
+<text x="550" y="187.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">a cosine close to 1. p16: further.</text>
+<text x="24" y="380" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">The picture has 2 numbers per vector; the notebook asks for 256. The angle works the same way.</text>
+</svg>

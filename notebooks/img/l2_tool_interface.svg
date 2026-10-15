@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="320" viewBox="0 0 780 320" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="320" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">The interface of a tool: three texts the model reads</text>
+<rect x="24" y="44" width="236" height="66" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="142.0" y="62" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">① choose</text>
+<text x="142.0" y="80" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">name + description</text>
+<text x="142.0" y="95" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">decides WHICH tool</text>
+<rect x="24" y="118" width="236" height="136" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="34" y="134" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">vague:  "Get the status of</text>
+<text x="34" y="150" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">        a transaction."</text>
+<text x="34" y="166" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace"></text>
+<text x="34" y="182" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">precise: "Only whether one</text>
+<text x="34" y="198" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">  transaction is booked or</text>
+<text x="34" y="214" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">  pending. For any other</text>
+<text x="34" y="230" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">  detail, use get_transaction."</text>
+<line x1="261" y1="77" x2="271" y2="77" stroke="#898781" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="272" y="44" width="236" height="66" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="390.0" y="62" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">② fill in</text>
+<text x="390.0" y="80" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">parameters: types, enums,</text>
+<text x="390.0" y="95" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">argument descriptions</text>
+<rect x="272" y="118" width="236" height="136" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="282" y="134" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">days:   {"type": "integer"}</text>
+<text x="282" y="150" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace"></text>
+<text x="282" y="166" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">reason: {"type": "string",</text>
+<text x="282" y="182" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">  "enum": ["lost", "stolen",</text>
+<text x="282" y="198" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">   "damaged", "fraud"]}</text>
+<text x="282" y="214" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace"></text>
+<text x="282" y="230" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">free text → "Wallet stolen"</text>
+<line x1="509" y1="77" x2="519" y2="77" stroke="#898781" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="520" y="44" width="236" height="66" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="638.0" y="62" font-size="13" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">③ react</text>
+<text x="638.0" y="80" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the result, or the error</text>
+<text x="638.0" y="95" font-size="11" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">text</text>
+<rect x="520" y="118" width="236" height="136" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="530" y="134" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">bare:    "invalid argument"</text>
+<text x="530" y="150" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace"></text>
+<text x="530" y="166" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">helpful: "Error: days can be</text>
+<text x="530" y="182" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">  at most 90. Call again with</text>
+<text x="530" y="198" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">  days=90, and tell the</text>
+<text x="530" y="214" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">  customer that older ones</text>
+<text x="530" y="230" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">  are in the statements."</text>
+<rect x="24" y="266" width="732" height="42" rx="6" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
+<text x="34" y="280.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">You write all three texts; the model reads nothing else about the tool.</text>
+<text x="34" y="295.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">All the schemas go out with every request, at every step of the loop: they cost input tokens each time.</text>
+</svg>

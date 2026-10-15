@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="320" viewBox="0 0 780 320" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="320" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">Four kinds of grader</text>
+<rect x="24" y="46" width="172" height="160" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="34" y="64" font-size="12.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">code</text>
+<text x="34" y="84" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">exact_category, numbers</text>
+<text x="34" y="112" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">reads: the answer</text>
+<text x="34" y="130" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">decides: a rule in code</text>
+<text x="34" y="148" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">cost: zero</text>
+<text x="34" y="166" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">trust: as good</text>
+<text x="34" y="184" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">as the rule</text>
+<rect x="204" y="46" width="172" height="160" rx="6" fill="#ece6f8" stroke="#7b5cc4" stroke-width="1.2"/>
+<text x="214" y="64" font-size="12.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">a model as judge</text>
+<text x="214" y="84" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">judge, pick</text>
+<text x="214" y="112" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">reads: question, reference,</text>
+<text x="214" y="130" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">answer</text>
+<text x="214" y="148" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">decides: a prompt</text>
+<text x="214" y="166" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">cost: one more call</text>
+<text x="214" y="184" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">trust: measured on labels</text>
+<rect x="384" y="46" width="172" height="160" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="394" y="64" font-size="12.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">trajectory</text>
+<text x="394" y="84" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">match, safety_order</text>
+<text x="394" y="112" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">reads: the tool calls</text>
+<text x="394" y="130" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">in order</text>
+<text x="394" y="148" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">decides: a mode (strict…)</text>
+<text x="394" y="166" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">cost: zero</text>
+<text x="394" y="184" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">trust: as good as the list</text>
+<rect x="564" y="46" width="172" height="160" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="574" y="64" font-size="12.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">outcome</text>
+<text x="574" y="84" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">world_has_booking</text>
+<text x="574" y="112" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">reads: the world after</text>
+<text x="574" y="130" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the run (a database)</text>
+<text x="574" y="148" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">decides: a query</text>
+<text x="574" y="166" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">cost: zero</text>
+<text x="574" y="184" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">trust: the highest</text>
+<line x1="28" y1="226" x2="750" y2="226" stroke="#898781" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="28" y="244" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">cheaper, faster, blind to meaning</text>
+<text x="752" y="244" font-size="10.5" fill="#52514e" text-anchor="end" font-weight="normal" dominant-baseline="middle" xml:space="preserve">closer to what the customer gets</text>
+<rect x="24" y="264" width="732" height="42" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="34" y="278.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Use the cheapest grader that can decide: code where a rule can, a judge only where meaning matters, and the world wherever</text>
+<text x="34" y="293.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the agent changes something. One task can have several graders: a refund is graded by its answer, its trajectory and its order.</text>
+</svg>

@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="404" viewBox="0 0 780 404" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="404" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">The message list of a run with parallel calls</text>
+<rect x="24" y="46" width="500" height="30" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="34" y="61" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">0</text>
+<text x="52" y="61" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">system</text>
+<text x="124" y="61.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">You are the NovaBank back-office assistant. …</text>
+<rect x="24" y="84" width="500" height="30" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="34" y="99" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">1</text>
+<text x="52" y="99" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">user</text>
+<text x="124" y="99.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">What are the balances of A-1001, A-1002 and A-1003?</text>
+<rect x="24" y="122" width="500" height="74" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="34" y="137" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">2</text>
+<text x="52" y="137" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">assistant</text>
+<text x="124" y="137.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">content null · tool_calls:</text>
+<text x="140" y="155" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">call_1  get_balance {"account_id":"A-1001"}</text>
+<text x="140" y="169" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">call_2  get_balance {"account_id":"A-1002"}</text>
+<text x="140" y="183" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">call_3  get_balance {"account_id":"A-1003"}</text>
+<rect x="24" y="204" width="500" height="30" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="34" y="219" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">3</text>
+<text x="52" y="219" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">tool</text>
+<text x="124" y="219.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">tool_call_id call_1 · {"balance_eur": 1240.5}</text>
+<rect x="24" y="242" width="500" height="30" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="34" y="257" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">4</text>
+<text x="52" y="257" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">tool</text>
+<text x="124" y="257.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">tool_call_id call_2 · {"balance_eur": 86.2}</text>
+<rect x="24" y="280" width="500" height="30" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="34" y="295" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">5</text>
+<text x="52" y="295" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">tool</text>
+<text x="124" y="295.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">tool_call_id call_3 · {"balance_eur": 15320.0}</text>
+<rect x="24" y="318" width="500" height="30" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="34" y="333" font-size="10" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">6</text>
+<text x="52" y="333" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">assistant</text>
+<text x="124" y="333.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">The balances: 1,240.50, 86.20 and 15,320.00 EUR.</text>
+<path d="M 454 155 L 532 155 C 558 155, 558 219, 528 219" fill="none" stroke="#2a78d6" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M 454 169 L 532 169 C 574 169, 574 257, 528 257" fill="none" stroke="#1baf7a" stroke-width="1.5" marker-end="url(#arrow)"/>
+<path d="M 454 183 L 532 183 C 590 183, 590 295, 528 295" fill="none" stroke="#eb6834" stroke-width="1.5" marker-end="url(#arrow)"/>
+<rect x="598" y="60" width="166" height="57" rx="6" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
+<text x="608" y="74.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Each call has an id.</text>
+<text x="608" y="89.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Each tool message names</text>
+<text x="608" y="104.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the id it answers.</text>
+<rect x="598" y="140" width="166" height="57" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="608" y="154.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">A call and its result are</text>
+<text x="608" y="169.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">one unit: keep both or</text>
+<text x="608" y="184.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">drop both.</text>
+<rect x="598" y="220" width="166" height="57" rx="6" fill="#fbe3e3" stroke="#d23c3c" stroke-width="1.2"/>
+<text x="608" y="234.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">A missing or unknown id:</text>
+<text x="608" y="249.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">HTTP 400, before the</text>
+<text x="608" y="264.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">model is even called.</text>
+<text x="24" y="384" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Messages 2 to 5 are one round: one assistant message with three calls, three tool messages that answer them.</text>
+</svg>

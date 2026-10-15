@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="340" viewBox="0 0 780 340" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="340" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">One run as spans: a call tree on a time line</text>
+<text x="24" y="70" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">invoke_agent back-office</text>
+<rect x="250.0" y="58" width="491.7" height="24" rx="4" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="258.0" y="70.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the root: the whole run</text>
+<text x="24" y="110" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">├─ chat small</text>
+<rect x="250.0" y="98" width="230.99999999999997" height="24" rx="4" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="258.0" y="110.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">asks for get_balance</text>
+<text x="24" y="150" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">├─ execute_tool get_balance</text>
+<rect x="481.0" y="138" width="5" height="24" rx="4" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="24" y="190" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">└─ chat small</text>
+<rect x="481.0" y="178" width="260.7" height="24" rx="4" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="489.0" y="190.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">text: the answer</text>
+<text x="493.0" y="150" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">output: "Error: ConnectionError: …"</text>
+<line x1="250" y1="236" x2="745.0" y2="236" stroke="#898781" stroke-width="1"/>
+<line x1="250" y1="232" x2="250" y2="240" stroke="#898781" stroke-width="1"/>
+<text x="250" y="252" font-size="10" fill="#898781" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">0.0 s</text>
+<line x1="415.0" y1="232" x2="415.0" y2="240" stroke="#898781" stroke-width="1"/>
+<text x="415.0" y="252" font-size="10" fill="#898781" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">0.5 s</text>
+<line x1="580.0" y1="232" x2="580.0" y2="240" stroke="#898781" stroke-width="1"/>
+<text x="580.0" y="252" font-size="10" fill="#898781" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">1.0 s</text>
+<line x1="745.0" y1="232" x2="745.0" y2="240" stroke="#898781" stroke-width="1"/>
+<text x="745.0" y="252" font-size="10" fill="#898781" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">1.5 s</text>
+<rect x="24" y="270" width="732" height="57" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="34" y="284.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Every span keeps: name · trace_id (one per run, shared by all its spans) · span_id (its own) · parent_id (the span it came from)</text>
+<text x="34" y="299.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">· start_time and end_time · attributes (what it did: model, tokens, messages, tool input and output) · events (an exception, if it raised).</text>
+<text x="34" y="314.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">The tree on the left is drawn from parent_id alone; the order of siblings from start_time.</text>
+</svg>

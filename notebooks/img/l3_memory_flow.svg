@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="404" viewBox="0 0 780 404" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="404" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">Long-term memory is a table your code writes and reads</text>
+<rect x="24" y="52" width="210" height="44" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="129.0" y="66.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">NovaBank's own records</text>
+<text x="129.0" y="83.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">source = "bank_record"</text>
+<rect x="24" y="120" width="210" height="60" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="129.0" y="134.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">Monday · a chat</text>
+<text x="129.0" y="151.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">"I moved from Warsaw to Lisbon.</text>
+<text x="129.0" y="166.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Send my card there."</text>
+<line x1="129" y1="180" x2="129" y2="204" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="24" y="206" width="210" height="52" rx="6" fill="#ece6f8" stroke="#7b5cc4" stroke-width="1.2"/>
+<text x="129.0" y="216.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">extract_facts</text>
+<text x="129.0" y="233.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">one model call: the facts</text>
+<text x="129.0" y="248.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">worth keeping, one per line</text>
+<line x1="129" y1="258" x2="129" y2="282" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="24" y="284" width="210" height="44" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="129.0" y="298.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">remember(user, fact, source)</text>
+<text x="129.0" y="315.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">source = "customer_said"</text>
+<text x="427.0" y="58" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the memories table (sqlite)</text>
+<rect x="262" y="70" width="62" height="28" rx="0" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="269" y="84" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">user_id</text>
+<rect x="324" y="70" width="176" height="28" rx="0" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="331" y="84" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">fact</text>
+<rect x="500" y="70" width="92" height="28" rx="0" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="507" y="84" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">source</text>
+<rect x="262" y="98" width="62" height="28" rx="0" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="269" y="112" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">C-1001</text>
+<rect x="324" y="98" width="176" height="28" rx="0" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="331" y="112" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Has an Everyday account …</text>
+<rect x="500" y="98" width="92" height="28" rx="0" fill="#dff5ec" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="507" y="112" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">bank_record</text>
+<rect x="262" y="126" width="62" height="28" rx="0" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="269" y="140" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">C-1001</text>
+<rect x="324" y="126" width="176" height="28" rx="0" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="331" y="140" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Moved from Warsaw to Lisbon</text>
+<rect x="500" y="126" width="92" height="28" rx="0" fill="#e3eefb" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="507" y="140" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">customer_said</text>
+<rect x="262" y="154" width="62" height="28" rx="0" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="269" y="168" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">C-1001</text>
+<rect x="324" y="154" width="176" height="28" rx="0" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="331" y="168" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">New card to the Lisbon address</text>
+<rect x="500" y="154" width="92" height="28" rx="0" fill="#e3eefb" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="507" y="168" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">customer_said</text>
+<text x="427.0" y="198" font-size="10.5" fill="#898781" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">+ created_at: when it was written</text>
+<path d="M 234 74 C 250 74, 246 112, 260 112" fill="none" stroke="#1baf7a" stroke-width="1.4" marker-end="url(#arrow)"/>
+<path d="M 234 306 C 252 306, 248 154, 260 154" fill="none" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="616" y="52" width="148" height="52" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="690.0" y="62.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">recall(user_id)</text>
+<text x="690.0" y="79.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the facts, oldest first,</text>
+<text x="690.0" y="94.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">as (fact, source)</text>
+<line x1="592" y1="126" x2="616" y2="78" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="690" y1="104" x2="690" y2="132" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="616" y="134" width="148" height="66" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="690.0" y="143.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">memory_prompt</text>
+<text x="690.0" y="160.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the rules, then</text>
+<text x="690.0" y="175.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">"What we know about</text>
+<text x="690.0" y="190.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">this customer …"</text>
+<line x1="690" y1="200" x2="690" y2="228" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="616" y="230" width="148" height="60" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="690.0" y="244.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">Tuesday · a new chat</text>
+<text x="690.0" y="261.0" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">no history at all; the</text>
+<text x="690.0" y="276.0" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">facts sit in the system prompt</text>
+<rect x="262" y="236" width="330" height="57" rx="6" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
+<text x="272" y="250.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">The model remembers nothing between the two chats.</text>
+<text x="272" y="265.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Your code wrote the row on Monday and read it</text>
+<text x="272" y="280.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">into Tuesday's system prompt.</text>
+<rect x="262" y="312" width="330" height="42" rx="6" fill="#fbe3e3" stroke="#d23c3c" stroke-width="1.2"/>
+<text x="272" y="326.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">A stored fact is read as true in every later session.</text>
+<text x="272" y="341.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">The source column says how far to trust it.</text>
+<text x="24" y="384" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Long-term memory: a row your code writes after one session and reads at the start of the next.</text>
+</svg>

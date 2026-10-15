@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="378" viewBox="0 0 780 378" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="378" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">The dual-LLM pattern</text>
+<rect x="24" y="46" width="340" height="236" rx="6" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="36" y="62" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">exposed to untrusted text: no tools, no secrets</text>
+<rect x="40" y="76" width="308" height="52" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="50" y="92" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">mail 3, read by our code</text>
+<text x="50" y="110" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">read_email(3): the whole body</text>
+<line x1="194" y1="128" x2="194" y2="148" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="40" y="148" width="308" height="54" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="194.0" y="167.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the quarantined LLM</text>
+<text x="194.0" y="184.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">summarises the mail; asks for nothing</text>
+<line x1="194" y1="202" x2="194" y2="222" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="40" y="222" width="308" height="50" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="50" y="238" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">VALUES["$EMAIL_SUMMARY"] = …</text>
+<text x="50" y="256" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">our code stores the text under a name</text>
+<rect x="416" y="46" width="340" height="236" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="428" y="62" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">holds tools and secrets: never reads untrusted text</text>
+<rect x="432" y="76" width="308" height="52" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="442" y="92" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the request</text>
+<text x="442" y="110" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"Email ada@… the summary of email 3.</text>
+<text x="442" y="124" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace"> It is stored as $EMAIL_SUMMARY."</text>
+<line x1="586" y1="128" x2="586" y2="148" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="432" y="148" width="308" height="54" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="586.0" y="167.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the privileged LLM</text>
+<text x="586.0" y="184.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">sees the name, never the value</text>
+<line x1="586" y1="202" x2="586" y2="222" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="432" y="222" width="308" height="50" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="442" y="238" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">send_with_values(to, subject, body)</text>
+<text x="442" y="256" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">body: "… $EMAIL_SUMMARY"</text>
+<path d="M 348 247 C 380 247, 380 316, 398 316" fill="none" stroke="#52514e" stroke-width="1.3" marker-end="url(#arrow)"/>
+<path d="M 586 272 L 586 296" fill="none" stroke="#52514e" stroke-width="1.3" marker-end="url(#arrow)"/>
+<rect x="400" y="296" width="356" height="40" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="578.0" y="316.0" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the tool pastes the value in → the outbox</text>
+<text x="24" y="358" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">The injection lands on a model that cannot act; the model that can act never reads the injection. Code moves the value, not a model.</text>
+</svg>

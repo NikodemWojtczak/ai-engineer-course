@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="382" viewBox="0 0 780 382" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="382" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">The history is data you send again</text>
+<text x="109.0" y="58" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the request of turn 1</text>
+<rect x="24" y="74" width="170" height="26" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="34" y="87.0" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">system</text>
+<text x="98" y="87.0" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the rules</text>
+<rect x="24" y="106" width="170" height="26" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="34" y="119.0" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">user</text>
+<text x="98" y="119.0" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">question 1</text>
+<text x="186" y="119.0" font-size="9.5" fill="#898781" text-anchor="end" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-style="italic">new</text>
+<line x1="109.0" y1="136" x2="109.0" y2="290" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="305.0" y="58" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the request of turn 2</text>
+<rect x="220" y="74" width="170" height="26" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="230" y="87.0" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">system</text>
+<text x="294" y="87.0" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the rules</text>
+<rect x="220" y="106" width="170" height="26" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="230" y="119.0" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">user</text>
+<text x="294" y="119.0" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">question 1</text>
+<rect x="220" y="138" width="170" height="26" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="230" y="151.0" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">assistant</text>
+<text x="294" y="151.0" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">answer 1</text>
+<text x="382" y="151.0" font-size="9.5" fill="#898781" text-anchor="end" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-style="italic">new</text>
+<rect x="220" y="170" width="170" height="26" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="230" y="183.0" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">user</text>
+<text x="294" y="183.0" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">question 2</text>
+<text x="382" y="183.0" font-size="9.5" fill="#898781" text-anchor="end" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-style="italic">new</text>
+<line x1="305.0" y1="200" x2="305.0" y2="290" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="501.0" y="58" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the request of turn 3</text>
+<rect x="416" y="74" width="170" height="26" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="426" y="87.0" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">system</text>
+<text x="490" y="87.0" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the rules</text>
+<rect x="416" y="106" width="170" height="26" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="426" y="119.0" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">user</text>
+<text x="490" y="119.0" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">question 1</text>
+<rect x="416" y="138" width="170" height="26" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="426" y="151.0" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">assistant</text>
+<text x="490" y="151.0" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">answer 1</text>
+<rect x="416" y="170" width="170" height="26" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="426" y="183.0" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">user</text>
+<text x="490" y="183.0" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">question 2</text>
+<rect x="416" y="202" width="170" height="26" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="426" y="215.0" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">assistant</text>
+<text x="490" y="215.0" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">answer 2</text>
+<text x="578" y="215.0" font-size="9.5" fill="#898781" text-anchor="end" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-style="italic">new</text>
+<rect x="416" y="234" width="170" height="26" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="426" y="247.0" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">user</text>
+<text x="490" y="247.0" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">question 3</text>
+<text x="578" y="247.0" font-size="9.5" fill="#898781" text-anchor="end" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-style="italic">new</text>
+<line x1="501.0" y1="264" x2="501.0" y2="290" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="24" y="292" width="562" height="46" rx="6" fill="#ece6f8" stroke="#7b5cc4" stroke-width="1.2"/>
+<text x="305.0" y="307.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the model</text>
+<text x="305.0" y="324.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">a list of messages in, one message out; nothing is kept between two calls</text>
+<rect x="612" y="74" width="152" height="87" rx="6" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
+<text x="622" y="88.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Your code keeps the</text>
+<text x="622" y="103.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">list. Each turn sends</text>
+<text x="622" y="118.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">it all again, so each</text>
+<text x="622" y="133.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">turn pays for every</text>
+<text x="622" y="148.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">turn before it.</text>
+<rect x="612" y="176" width="152" height="72" rx="6" fill="#fbe3e3" stroke="#d23c3c" stroke-width="1.2"/>
+<text x="622" y="190.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Nothing sent, nothing</text>
+<text x="622" y="205.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">known: a turn sent</text>
+<text x="622" y="220.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">without the history</text>
+<text x="622" y="235.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">starts from nothing.</text>
+<text x="24" y="362" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">The chat "remembers" because the request grows: turn 3 carries turn 1 and 2 with it.</text>
+</svg>

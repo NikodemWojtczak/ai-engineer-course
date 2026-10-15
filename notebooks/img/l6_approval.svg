@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="354" viewBox="0 0 780 354" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="354" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">Human approval: show the arguments, not the story</text>
+<text x="24" y="50" font-size="12" fill="#d23c3c" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">a gate on the summary: the reviewer reads the model's story</text>
+<rect x="24" y="64" width="340" height="62" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="34" y="80" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">what the reviewer sees</text>
+<text x="34" y="98" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">"I'll issue a small 50 EUR goodwill refund</text>
+<text x="34" y="112" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">  to the customer."</text>
+<line x1="194" y1="126" x2="194" y2="150" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="24" y="150" width="340" height="62" rx="6" fill="#fbe3e3" stroke="#d23c3c" stroke-width="1.2"/>
+<text x="34" y="166" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">what runs after "approve"</text>
+<text x="34" y="184" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">refund(account_id="A-1001",</text>
+<text x="34" y="198" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">       amount_eur=5000)</text>
+<text x="416" y="50" font-size="12" fill="#1baf7a" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">a gate on the arguments: the reviewer reads the call</text>
+<rect x="416" y="64" width="340" height="62" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="426" y="80" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">what the reviewer sees</text>
+<text x="426" y="98" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">refund({"account_id": "A-1001",</text>
+<text x="426" y="112" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">        "amount_eur": 5000})</text>
+<line x1="586" y1="126" x2="586" y2="150" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="416" y="150" width="340" height="62" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="426" y="166" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">what runs</text>
+<text x="426" y="184" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">exactly what was shown, or nothing</text>
+<text x="426" y="198" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">("not approved" goes back)</text>
+<text x="24" y="246" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">Ask only when it matters, or the reviewer stops reading</text>
+<rect x="24" y="260" width="174" height="52" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="111.0" y="278.0" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">read-only tools</text>
+<text x="111.0" y="295.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">never ask</text>
+<rect x="210" y="260" width="174" height="52" rx="6" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
+<text x="297.0" y="278.0" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">soft gate</text>
+<text x="297.0" y="295.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">reversible; goes ahead if ignored</text>
+<rect x="396" y="260" width="174" height="52" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="483.0" y="278.0" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">hard gate</text>
+<text x="483.0" y="295.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">irreversible; blocks if ignored</text>
+<rect x="582" y="260" width="174" height="52" rx="6" fill="#fbe3e3" stroke="#d23c3c" stroke-width="1.2"/>
+<text x="669.0" y="278.0" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">"don't ask again"</text>
+<text x="669.0" y="295.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">key: tool + amount band</text>
+<text x="24" y="334" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">A gate is only as good as what it shows, and as what the reviewer still reads after the twentieth prompt.</text>
+</svg>

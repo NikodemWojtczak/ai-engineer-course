@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="366" viewBox="0 0 780 366" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="366" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">Outcome: grade the world after the run</text>
+<rect x="24" y="54" width="200" height="64" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="124.0" y="78.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the agent's reply</text>
+<text x="124.0" y="95.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">"You are booked for Mon 09:00."</text>
+<rect x="24" y="136" width="200" height="64" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="124.0" y="160.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">its trajectory</text>
+<text x="124.0" y="177.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">list_slots → book_slot</text>
+<rect x="24" y="218" width="200" height="84" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="124" y="236" font-size="11.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the world: bookings table</text>
+<text x="124" y="258" font-size="10" fill="#898781" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">id · customer_id · slot · status</text>
+<text x="124" y="278" font-size="10" fill="#d23c3c" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">(no row: the write was lost)</text>
+<line x1="226" y1="86" x2="300" y2="86" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="302" y="62" width="300" height="48" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="314" y="78" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">judge_says_booked</text>
+<text x="314" y="96" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">a model reads the reply</text>
+<line x1="604" y1="86" x2="650" y2="86" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="700" y="86" font-size="13" fill="#1baf7a" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">pass</text>
+<line x1="226" y1="168" x2="300" y2="168" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="302" y="144" width="300" height="48" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="314" y="160" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">trajectory_has_book_slot</text>
+<text x="314" y="178" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the call is in the list</text>
+<line x1="604" y1="168" x2="650" y2="168" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="700" y="168" font-size="13" fill="#1baf7a" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">pass</text>
+<line x1="226" y1="260" x2="300" y2="260" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="302" y="236" width="300" height="48" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="314" y="252" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">world_has_booking</text>
+<text x="314" y="270" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">a query on the table</text>
+<line x1="604" y1="260" x2="650" y2="260" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="700" y="260" font-size="13" fill="#d23c3c" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">fail</text>
+<text x="24" y="330" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Only the world grader sees that the booking never happened. Grade the state you wanted to change, not the words about it,</text>
+<text x="24" y="346" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">and test the grader itself on a run you know: a grader with a bug passes or fails the wrong runs just as confidently.</text>
+</svg>

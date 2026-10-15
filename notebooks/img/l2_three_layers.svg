@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="352" viewBox="0 0 780 352" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="352" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">One agent, three layers: the same loop in three places</text>
+<rect x="24" y="42" width="236" height="46" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="142.0" y="57.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">A · the API</text>
+<text x="142.0" y="74.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">you write the loop</text>
+<rect x="24" y="96" width="236" height="170" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.2"/>
+<rect x="272" y="42" width="236" height="46" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="390.0" y="57.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">B · LangChain + LangGraph</text>
+<text x="390.0" y="74.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">a graph runs the loop</text>
+<rect x="272" y="96" width="236" height="170" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.2"/>
+<rect x="520" y="42" width="236" height="46" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="638.0" y="57.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">C · Agno</text>
+<text x="638.0" y="74.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">agent.run runs the loop</text>
+<rect x="520" y="96" width="236" height="170" rx="6" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="36" y="116" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">for step in range(max_steps):</text>
+<text x="36" y="132" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">    response = parse(…, tools,</text>
+<text x="36" y="148" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">        response_format)</text>
+<text x="36" y="164" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">    if no tool_calls:</text>
+<text x="36" y="180" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">        return parsed</text>
+<text x="36" y="196" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">    for call in tool_calls:</text>
+<text x="36" y="212" font-size="10" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">        run_tool(call)</text>
+<rect x="350" y="104" width="80" height="26" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="390.0" y="117.0" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">start</text>
+<rect x="302" y="160" width="76" height="30" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="340.0" y="175.0" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">model</text>
+<rect x="408" y="160" width="76" height="30" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="446.0" y="175.0" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">tools</text>
+<rect x="350" y="226" width="80" height="26" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="390.0" y="239.0" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">end</text>
+<line x1="378" y1="130" x2="348" y2="158" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<path d="M 378 168 L 406 168" fill="none" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<path d="M 408 184 L 380 184" fill="none" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)" stroke-dasharray="4 3"/>
+<line x1="342" y1="190" x2="376" y2="224" stroke="#52514e" stroke-width="1.4" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+<text x="444" y="206" font-size="9.5" fill="#898781" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">tools → model:</text>
+<text x="444" y="218" font-size="9.5" fill="#898781" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the loop</text>
+<rect x="540" y="110" width="196" height="140" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="638.0" y="128" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">agent.run(question)</text>
+<text x="638.0" y="156" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">model → tools → model …</text>
+<text x="638.0" y="172" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">(the same loop, inside)</text>
+<text x="638.0" y="188" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve"></text>
+<text x="638.0" y="204" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the result: RunOutput</text>
+<text x="638.0" y="220" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">run.tools, run.content</text>
+<line x1="142.0" y1="266" x2="142.0" y2="292" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="390.0" y1="266" x2="390.0" y2="292" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="638.0" y1="266" x2="638.0" y2="292" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="24" y="294" width="732" height="40" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="390.0" y="306.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the toy gateway on port 5120</text>
+<text x="390.0" y="323.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">x-app: layer-a · layer-b · layer-c, so the log and LAST_BODY show what each layer really sent</text>
+</svg>

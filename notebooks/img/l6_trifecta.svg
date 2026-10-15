@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="400" viewBox="0 0 780 400" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="400" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">The lethal trifecta, and the Rule of Two</text>
+<circle cx="190" cy="150" r="92" fill="#ece6f8" fill-opacity="0.55" stroke="#7b5cc4" stroke-width="1.4"/>
+<circle cx="296" cy="150" r="92" fill="#fdf1d6" fill-opacity="0.55" stroke="#eda100" stroke-width="1.4"/>
+<circle cx="243" cy="238" r="92" fill="#fbe3e3" fill-opacity="0.55" stroke="#d23c3c" stroke-width="1.4"/>
+<text x="150" y="120" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">private data</text>
+<text x="150" y="135" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">get_staff_discount</text>
+<text x="336" y="120" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">untrusted content</text>
+<text x="336" y="135" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">read_email</text>
+<text x="336" y="150" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">read_file · fetch_url</text>
+<text x="243" y="290" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">an exit</text>
+<text x="243" y="305" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">send_email · fetch_url</text>
+<text x="243" y="320" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">a rendered link</text>
+<text x="243" y="182" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">all three:</text>
+<text x="243" y="197" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">exfiltration</text>
+<text x="536" y="54" font-size="13" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">The Rule of Two</text>
+<text x="536" y="76" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Without a human in the loop, give one agent</text>
+<text x="536" y="91" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">at most two of the three:</text>
+<rect x="536" y="108" width="220" height="56" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="546" y="125" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">data + untrusted content</text>
+<text x="546" y="140" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">a reader: it can read anything, but has</text>
+<text x="546" y="153" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">no way out</text>
+<rect x="536" y="172" width="220" height="56" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="546" y="189" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">data + an exit</text>
+<text x="546" y="204" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">a writer: it acts, but reads only</text>
+<text x="546" y="217" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">trusted input</text>
+<rect x="536" y="236" width="220" height="56" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="546" y="253" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">untrusted content + an exit</text>
+<text x="546" y="268" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">no secret within reach to send</text>
+<rect x="536" y="300" width="220" height="56" rx="6" fill="#fbe3e3" stroke="#d23c3c" stroke-width="1.2"/>
+<text x="546" y="317" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">all three</text>
+<text x="546" y="332" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">only with a human approving each exit</text>
+<text x="24" y="380" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Each leg alone is harmless and common. The combination in one agent is what makes one injected sentence enough.</text>
+</svg>

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="350" viewBox="0 0 780 350" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="350" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">Where the guards sit</text>
+<rect x="24" y="70" width="104" height="56" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="76.0" y="82.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">a message</text>
+<text x="76.0" y="99.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">user or tool</text>
+<text x="76.0" y="114.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">text</text>
+<line x1="128" y1="98" x2="152" y2="98" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="152" y="56" width="168" height="84" rx="6" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
+<text x="162" y="72" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">input guards</text>
+<text x="162" y="90" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">regex · classifier</text>
+<text x="162" y="104" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">(moderation: wrong</text>
+<text x="162" y="118" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">tool for this)</text>
+<text x="162" y="132" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">before_call</text>
+<line x1="320" y1="98" x2="344" y2="98" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="344" y="70" width="104" height="56" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="396.0" y="82.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the model</text>
+<text x="396.0" y="99.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">writes text or</text>
+<text x="396.0" y="114.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">a tool call</text>
+<line x1="448" y1="98" x2="472" y2="98" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="472" y="56" width="150" height="84" rx="6" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
+<text x="482" y="72" font-size="11.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">output guards</text>
+<text x="482" y="90" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the canary check</text>
+<text x="482" y="104" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">link stripping</text>
+<text x="482" y="118" font-size="10" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">after_call</text>
+<line x1="622" y1="98" x2="646" y2="98" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<rect x="646" y="70" width="110" height="56" rx="6" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="701.0" y="82.0" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">the reply</text>
+<text x="701.0" y="99.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">what the user</text>
+<text x="701.0" y="114.0" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">sees</text>
+<rect x="344" y="170" width="412" height="56" rx="6" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="358" y="188" font-size="11" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">a tool call goes on to the deterministic controls (Parts 4–5)</text>
+<text x="358" y="208" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">policy_check · approval on the arguments · least privilege</text>
+<path d="M 396 126 L 396 168" fill="none" stroke="#52514e" stroke-width="1.3" marker-end="url(#arrow)"/>
+<text x="24" y="252" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">on the gateway (Layer A)</text>
+<text x="214" y="252" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">before_call / after_call: every agent passes, none can forget it</text>
+<text x="24" y="274" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">LangChain (Layer B)</text>
+<text x="214" y="274" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">@before_agent can jump to the end; @after_model can replace the reply</text>
+<text x="24" y="296" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">Agno (Layer C)</text>
+<text x="214" y="296" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">pre_hooks: a blocked run returns an error status; it does not raise</text>
+<text x="24" y="330" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Guards lower the odds; they are classifiers and have false negatives. The controls behind them bound the damage.</text>
+</svg>

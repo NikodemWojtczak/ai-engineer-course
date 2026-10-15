@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="458" viewBox="0 0 780 458" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="458" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">One session, two layouts: what the cache can reuse</text>
+<text x="24" y="56" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">stable first: each request starts with the whole request before it</text>
+<text x="24" y="84" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">request 1</text>
+<rect x="96" y="72" width="262.0" height="24" rx="3" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="227.0" y="84" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">rules + policies</text>
+<rect x="358.0" y="72" width="15.0" height="24" rx="3" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<rect x="373.0" y="72" width="10.0" height="24" rx="3" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<rect x="383.0" y="72" width="42.5" height="24" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="404.25" y="84" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">P1 + Q1</text>
+<text x="24" y="122" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">request 2</text>
+<rect x="96" y="110" width="262.0" height="24" rx="3" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="227.0" y="122" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">rules + policies</text>
+<rect x="358.0" y="110" width="15.0" height="24" rx="3" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<rect x="373.0" y="110" width="10.0" height="24" rx="3" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<rect x="383.0" y="110" width="42.5" height="24" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="404.25" y="122" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">P1 + Q1</text>
+<rect x="425.5" y="110" width="10.0" height="24" rx="3" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<rect x="435.5" y="110" width="42.5" height="24" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="456.75" y="122" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">P2 + Q2</text>
+<rect x="96" y="106" width="329.5" height="32" rx="4" fill="none" stroke="#1baf7a" stroke-width="1.8" stroke-dasharray="5 3"/>
+<text x="24" y="160" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">request 3</text>
+<rect x="96" y="148" width="262.0" height="24" rx="3" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="227.0" y="160" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">rules + policies</text>
+<rect x="358.0" y="148" width="15.0" height="24" rx="3" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<rect x="373.0" y="148" width="10.0" height="24" rx="3" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<rect x="383.0" y="148" width="42.5" height="24" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="404.25" y="160" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">P1 + Q1</text>
+<rect x="425.5" y="148" width="10.0" height="24" rx="3" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<rect x="435.5" y="148" width="42.5" height="24" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="456.75" y="160" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">P2 + Q2</text>
+<rect x="478.0" y="148" width="10.0" height="24" rx="3" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<rect x="488.0" y="148" width="42.5" height="24" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="509.25" y="160" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">P3 + Q3</text>
+<rect x="96" y="144" width="382.0" height="32" rx="4" fill="none" stroke="#1baf7a" stroke-width="1.8" stroke-dasharray="5 3"/>
+<text x="24" y="206" font-size="12" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">passages first: each request starts with new passages</text>
+<text x="24" y="234" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">request 1</text>
+<rect x="96" y="222" width="37.5" height="24" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="114.75" y="234" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">P1</text>
+<rect x="133.5" y="222" width="262.0" height="24" rx="3" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="264.5" y="234" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">rules + policies</text>
+<rect x="395.5" y="222" width="15.0" height="24" rx="3" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<rect x="410.5" y="222" width="10.0" height="24" rx="3" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<rect x="420.5" y="222" width="6.0" height="24" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="24" y="272" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">request 2</text>
+<rect x="96" y="260" width="37.5" height="24" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="114.75" y="272" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">P2</text>
+<rect x="133.5" y="260" width="262.0" height="24" rx="3" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="264.5" y="272" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">rules + policies</text>
+<rect x="395.5" y="260" width="15.0" height="24" rx="3" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<rect x="410.5" y="260" width="10.0" height="24" rx="3" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<rect x="420.5" y="260" width="6.0" height="24" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<rect x="426.5" y="260" width="10.0" height="24" rx="3" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<rect x="436.5" y="260" width="6.0" height="24" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<line x1="96" y1="254" x2="96" y2="290" stroke="#d23c3c" stroke-width="2.5"/>
+<text x="24" y="310" font-size="10.5" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">request 3</text>
+<rect x="96" y="298" width="37.5" height="24" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="114.75" y="310" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">P3</text>
+<rect x="133.5" y="298" width="262.0" height="24" rx="3" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="264.5" y="310" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">rules + policies</text>
+<rect x="395.5" y="298" width="15.0" height="24" rx="3" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<rect x="410.5" y="298" width="10.0" height="24" rx="3" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<rect x="420.5" y="298" width="6.0" height="24" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<rect x="426.5" y="298" width="10.0" height="24" rx="3" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<rect x="436.5" y="298" width="6.0" height="24" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<rect x="442.5" y="298" width="10.0" height="24" rx="3" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<rect x="452.5" y="298" width="6.0" height="24" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<line x1="96" y1="292" x2="96" y2="328" stroke="#d23c3c" stroke-width="2.5"/>
+<rect x="96" y="336" width="40" height="18" rx="4" fill="none" stroke="#1baf7a" stroke-width="1.8" stroke-dasharray="5 3"/>
+<text x="144" y="345" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the start this request shares with the request before it: it can come from the cache</text>
+<line x1="116" y1="366" x2="116" y2="384" stroke="#d23c3c" stroke-width="2.5"/>
+<text x="144" y="375" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the first token differs: nothing to reuse</text>
+<rect x="96" y="396" width="16" height="14" rx="3" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="118" y="403" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">rules + policies</text>
+<rect x="221.2" y="396" width="16" height="14" rx="3" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="243.2" y="403" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">customer facts</text>
+<rect x="334.0" y="396" width="16" height="14" rx="3" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="356.0" y="403" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">history, answers (A)</text>
+<rect x="484.0" y="396" width="16" height="14" rx="3" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="506.0" y="403" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">passages (P), question (Q)</text>
+<text x="24" y="438" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Widths follow the tokens. The cache needs an identical start of 1,024 tokens or more, counted in steps of 128.</text>
+</svg>

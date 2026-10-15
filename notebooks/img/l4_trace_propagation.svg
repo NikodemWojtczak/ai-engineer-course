@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="780" height="438" viewBox="0 0 780 438" font-family="Helvetica Neue, Helvetica, Arial, sans-serif">
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#52514e"/></marker><marker id="arrow_red" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#d23c3c"/></marker></defs>
+<rect width="780" height="438" fill="#fcfcfb"/>
+<text x="24" y="22" font-size="14" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">Where the trace id rides</text>
+<text x="24" y="54" font-size="11" fill="#898781" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">traceparent:</text>
+<rect x="110" y="44" width="27.64" height="20" rx="10" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="123.82" y="54.5" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">00</text>
+<text x="123.82" y="78" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">version</text>
+<text x="143.64" y="54" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">-</text>
+<rect x="149.64" y="44" width="232.24" height="20" rx="10" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="265.76" y="54.5" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">804071849000805b7103dfd2eac02812</text>
+<text x="265.76" y="78" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">trace id: the whole request</text>
+<text x="387.88" y="54" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">-</text>
+<rect x="393.88" y="44" width="123.12" height="20" rx="10" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="455.44" y="54.5" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">dac27260e8e692a7</text>
+<text x="455.44" y="78" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">parent id: the span that sent it</text>
+<text x="523.0" y="54" font-size="12" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">-</text>
+<rect x="529.0" y="44" width="27.64" height="20" rx="10" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="542.82" y="54.5" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">03</text>
+<text x="542.82" y="78" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">flags</text>
+<rect x="24" y="112" width="732" height="132" rx="6" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="40" y="130" font-size="13" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">MCP</text>
+<text x="84" y="130" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">inside the JSON-RPC message: params._meta</text>
+<rect x="40" y="156" width="130" height="40" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="105.0" y="168.0" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">MCP tools/call</text>
+<text x="105.0" y="185.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">our span</text>
+<rect x="196" y="146" width="380" height="52" rx="4" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="204" y="159.0" font-size="9.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">{"jsonrpc": "2.0", "id": 1, "method": "tools/call",</text>
+<text x="204" y="173.0" font-size="9.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace"> "params": {"name": "find_transactions", "arguments": {…},</text>
+<text x="204" y="187.0" font-size="9.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">            "_meta": {"traceparent": "00-8040…-dac2…-03"}}}</text>
+<rect x="604" y="150" width="140" height="52" rx="6" fill="#ffffff" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="674.0" y="160.0" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">tools/call …</text>
+<text x="674.0" y="177.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the server's span;</text>
+<text x="674.0" y="192.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">its parent: our span</text>
+<line x1="170" y1="176" x2="196" y2="176" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="576" y1="176" x2="604" y2="176" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="390" y="228" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-style="italic">our mcp_post, or the mcp package, adds it; FastMCP reads it</text>
+<rect x="24" y="262" width="732" height="132" rx="6" fill="#ece6f8" stroke="#7b5cc4" stroke-width="1.2"/>
+<text x="40" y="280" font-size="13" fill="#0b0b0b" text-anchor="start" font-weight="bold" dominant-baseline="middle" xml:space="preserve">A2A</text>
+<text x="84" y="280" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">in an HTTP header: A2A has no field for it</text>
+<rect x="40" y="306" width="130" height="40" rx="6" fill="#fde9e2" stroke="#eb6834" stroke-width="1.2"/>
+<text x="105.0" y="318.0" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">A2A message/send</text>
+<text x="105.0" y="335.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">our span</text>
+<rect x="196" y="296" width="380" height="66" rx="4" fill="#ffffff" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="204" y="309.0" font-size="9.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">POST / HTTP/1.1</text>
+<text x="204" y="323.0" font-size="9.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">traceparent: 00-8040…-dac2…-03</text>
+<text x="204" y="337.0" font-size="9.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace"></text>
+<text x="204" y="351.0" font-size="9.5" fill="#0b0b0b" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">{"jsonrpc": "2.0", "method": "message/send", …}</text>
+<rect x="604" y="300" width="140" height="52" rx="6" fill="#ffffff" stroke="#7b5cc4" stroke-width="1.2"/>
+<text x="674.0" y="310.0" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">POST /</text>
+<text x="674.0" y="327.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">the server's span;</text>
+<text x="674.0" y="342.0" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">its parent: our span</text>
+<line x1="170" y1="326" x2="196" y2="326" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="576" y1="326" x2="604" y2="326" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="390" y="378" font-size="10.5" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-style="italic">we add it; FastAPI reads it</text>
+<text x="24" y="418" font-size="11" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">The same trace id on both sides joins the server's spans to our call tree; the parent id says under which of our spans they hang.</text>
+</svg>
