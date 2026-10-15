@@ -9,10 +9,13 @@ Nothing in this file is new to the course: these are the helpers of Levels 1 to 
     4. The toy gateway               gateway_app, serve, stop_servers, gateway_log, last_request, ask, show_log, spent
     5. NovaBank data                 TICKETS, HANDBOOK, ACCOUNTS, TRANSACTIONS, REFUNDS
     6. Call trees                    tracer, spans_of, sent, model_reply, tool_input_output, describe, show_trace
+    7. The A2A client's HTTP         a2a_wire, a2a_http, trace_headers, run_async
 
 Importing this file loads the key from .env, creates the gateway's connection to the provider and sets up tracing. It
 starts no server: the notebook does that with serve(), on its own ports.
 """
+import asyncio
+import contextvars
 import json
 import os
 import random
@@ -296,7 +299,7 @@ REFUNDS = []                                                        # every refu
 # ---------------------------------------------------------------------------------------------------- 6. call trees
 from openinference.instrumentation.agno import AgnoInstrumentor          # noqa: E402  (after the data, as in Part 0)
 from openinference.instrumentation.langchain import LangChainInstrumentor  # noqa: E402
-from opentelemetry import trace                                          # noqa: E402
+from opentelemetry import propagate, trace                               # noqa: E402
 from opentelemetry.sdk.trace import TracerProvider                       # noqa: E402
 from opentelemetry.sdk.trace.export import SimpleSpanProcessor           # noqa: E402
 from opentelemetry.sdk.trace.export.in_memory_span_exporter import InMemorySpanExporter  # noqa: E402
@@ -305,7 +308,7 @@ os.environ["OTEL_INSTRUMENTATION_A2A_SDK_ENABLED"] = "false"        # the A2A SD
 exporter = InMemorySpanExporter()                                   # keeps every finished span in a list
 tracer_provider = TracerProvider()                                  # OTel keeps its first provider: this file runs once
 tracer_provider.add_span_processor(SimpleSpanProcessor(exporter))
-trace.set_tracer_provider(tracer_provider)                          # for our tracer, and for MCP, FastMCP and FastAPI
+trace.set_tracer_provider(tracer_provider)                          # for our tracer, MCP, FastMCP, FastAPI and Starlette
 LangChainInstrumentor().instrument(tracer_provider=tracer_provider)  # spans for the steps of LangChain
 AgnoInstrumentor().instrument(tracer_provider=tracer_provider)      # spans for the steps of Agno
 tracer = trace.get_tracer("novabank")                               # opens our own spans
@@ -372,20 +375,13 @@ def tool_input_output(span, parent):
 def describe(span, parent=None):
     """What one step did, from its span: a headline, and (label, value) pairs for the lines under it, values whole.
     A model call: the model and its tokens; then each tool it asked for with the whole arguments, or the whole text it
-    answered. A tool: its whole input and output. An A2A message: the whole text sent and answered. A request that a
-    server received: [which server] and the request."""
+    answered. A tool: its whole input and output. A request that a server received: [which server] and the request."""
     attributes = span.attributes
     kind = attributes.get("openinference.span.kind")                # how the LangChain and Agno instrumentors mark a step
     details = []
     if span.kind == trace.SpanKind.SERVER:
         side = "MCP server" if span.instrumentation_scope.name == "fastmcp" else "lending server"
         headline = f"[{side}] {span.name}" + (f" · port {attributes['server.port']}" if "server.port" in attributes else "")
-    elif "a2a.message.text" in attributes:                          # an A2A message that our code sent (Part 3)
-        headline = span.name
-        details = [("message:", attributes["a2a.message.text"]), ("answer:", attributes["a2a.reply.text"] or "(empty)")]
-        if "a2a.context_id.sent" in attributes:                     # the conversation id, both ways (Part 3)
-            details += [("contextId sent:", attributes["a2a.context_id.sent"]),
-                        ("contextId in the reply:", attributes["a2a.context_id.reply"])]
     elif attributes.get("gen_ai.operation.name") == "chat" or kind == "LLM":   # a model call
         if kind == "LLM":                                           # the model calls of LangChain and Agno
             model, tokens_in, tokens_out = (attributes.get("llm.model_name"), attributes.get("llm.token_count.prompt"),
@@ -402,7 +398,7 @@ def describe(span, parent=None):
         headline = span.name if kind is None else f"{span.name} · TOOL"
         tool_input, tool_output = tool_input_output(span, parent)
         details = [("input:", tool_input), ("output:", tool_output)]
-    elif "code.function.name" in attributes:                        # FastAPI's steps inside a request (Part 3)
+    elif "code.function.name" in attributes:                        # FastAPI's steps inside a request (AgentOS, Part 3)
         headline = f"{span.name} · {attributes['code.function.name']}"
     elif span.instrumentation_scope.name in ("fastmcp", "mcp-python-sdk"):  # the MCP clients inside LangChain and Agno
         headline = f"{span.name} · recorded by {span.instrumentation_scope.name}"
@@ -453,3 +449,50 @@ def show_trace(root, title):
     print(" start    took  call")
     for top in children.get(None, []):
         show(top, None, "", "")
+
+
+# ---------------------------------------------------------------------------------------------------- 7. the A2A client's HTTP
+a2a_wire = []                                                       # every A2A POST sent through a2a_http(), whole:
+                                                                    # {"request": the JSON-RPC body, "reply": the reply}
+
+
+async def record_request(request):
+    """An httpx hook, just before a request goes out: add our trace id (so the server's steps join our call trees), and
+    keep the body of a POST in a2a_wire."""
+    propagate.inject(request.headers)
+    if request.method == "POST":
+        a2a_wire.append({"request": json.loads(request.content)})
+
+
+async def record_reply(response):
+    """An httpx hook, when a reply comes in: keep its body next to its request. A stream (message/stream) is kept as the
+    list of its events."""
+    if response.request.method != "POST":
+        return
+    await response.aread()
+    sent_id = json.loads(response.request.content).get("id")
+    if response.headers.get("content-type", "").startswith("text/event-stream"):
+        reply = [json.loads(line[5:]) for line in response.text.splitlines() if line.startswith("data:")]
+    else:
+        reply = response.json()
+    next(entry for entry in reversed(a2a_wire) if entry["request"].get("id") == sent_id)["reply"] = reply
+
+
+def a2a_http():
+    """The HTTP client under the A2A SDK's client: it keeps every request and reply in a2a_wire."""
+    return httpx.AsyncClient(timeout=180, event_hooks={"request": [record_request], "response": [record_reply]})
+
+
+def trace_headers():
+    """The HTTP header that carries the current trace id to a server, for clients that take headers (Agno's A2AClient)."""
+    headers = {}
+    propagate.inject(headers)
+    return headers
+
+
+def run_async(coroutine):
+    """Run a coroutine to its end from synchronous code, also inside a notebook cell, whose event loop is already
+    running: in a worker thread, with a loop of its own. The current span goes along, so the call tree stays one."""
+    context = contextvars.copy_context()
+    with ThreadPoolExecutor(max_workers=1) as pool:
+        return pool.submit(context.run, asyncio.run, coroutine).result()

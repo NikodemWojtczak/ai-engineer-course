@@ -5,4 +5,3 @@ __pycache__/
 .DS_Store
 *.log
 litellm_demo/
-level_4_skills/

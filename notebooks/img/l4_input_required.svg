@@ -27,22 +27,24 @@
 <text x="275.0" y="274" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">contextId C · taskId T</text>
 <line x1="430" y1="314" x2="120" y2="314" stroke="#52514e" stroke-width="1.4" stroke-dasharray="5 4" marker-end="url(#arrow)"/>
 <text x="275.0" y="305" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">task T: state completed</text>
-<text x="275.0" y="326" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">status.message: "Noted: … 20,000 EUR. …"</text>
+<text x="275.0" y="326" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">artifact "quote": "… 354.07 EUR per month …"</text>
 <rect x="574" y="94" width="182" height="266" rx="6" fill="#ffffff" stroke="#7b5cc4" stroke-width="1.2"/>
 <text x="665" y="112" font-size="11" fill="#0b0b0b" text-anchor="middle" font-weight="bold" dominant-baseline="middle" xml:space="preserve">task store</text>
 <text x="665" y="130" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">InMemoryTaskStore</text>
-<rect x="628.705" y="156" width="72.59" height="20" rx="10" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
-<text x="665.0" y="166.5" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">submitted</text>
-<rect x="612.43" y="202" width="105.14" height="20" rx="10" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
-<text x="665.0" y="212.5" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">input-required</text>
-<rect x="628.705" y="308" width="72.59" height="20" rx="10" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
-<text x="665.0" y="318.5" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">completed</text>
-<line x1="665" y1="176" x2="665" y2="200" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
-<line x1="665" y1="222" x2="665" y2="238" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
-<line x1="665" y1="290" x2="665" y2="306" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
-<text x="665" y="250" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">turn 2 finds task T:</text>
-<text x="665" y="265" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">context.current_task,</text>
-<text x="665" y="280" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">then updater.complete(…)</text>
+<rect x="628.705" y="150" width="72.59" height="20" rx="10" fill="#efeeea" stroke="#c3c2b7" stroke-width="1.2"/>
+<text x="665.0" y="160.5" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">submitted</text>
+<rect x="612.43" y="190" width="105.14" height="20" rx="10" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
+<text x="665.0" y="200.5" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">input-required</text>
+<rect x="635.215" y="280" width="59.57" height="20" rx="10" fill="#e3eefb" stroke="#2a78d6" stroke-width="1.2"/>
+<text x="665.0" y="290.5" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">working</text>
+<rect x="628.705" y="320" width="72.59" height="20" rx="10" fill="#dff5ec" stroke="#1baf7a" stroke-width="1.2"/>
+<text x="665.0" y="330.5" font-size="10.5" fill="#0b0b0b" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve" font-family="Menlo, Consolas, monospace">completed</text>
+<line x1="665" y1="170" x2="665" y2="188" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="665" y1="210" x2="665" y2="226" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="665" y1="262" x2="665" y2="278" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<line x1="665" y1="300" x2="665" y2="318" stroke="#52514e" stroke-width="1.4" marker-end="url(#arrow)"/>
+<text x="665" y="238" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">turn 2: task T comes back</text>
+<text x="665" y="253" font-size="10" fill="#52514e" text-anchor="middle" font-weight="normal" dominant-baseline="middle" xml:space="preserve">as context.current_task</text>
 <rect x="24" y="400" width="732" height="27" rx="6" fill="#fdf1d6" stroke="#eda100" stroke-width="1.2"/>
 <text x="34" y="414.5" font-size="10.5" fill="#52514e" text-anchor="start" font-weight="normal" dominant-baseline="middle" xml:space="preserve">Asking back needs a task: a message has no state. A client that looks only for a message's parts cannot read either reply.</text>
 </svg>

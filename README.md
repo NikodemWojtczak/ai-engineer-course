@@ -9,7 +9,7 @@ Every concept is shown three times: **A** — with the plain OpenAI API, from sc
 | 1 · Model foundations & the AI Gateway | [`level_1_model_foundations_and_gateway.ipynb`](notebooks/level_1_model_foundations_and_gateway.ipynb) | **ready** — verified end to end against the real API on 2026-10-13 |
 | 2 · Tool calling & structured output | [`level_2_tool_calling_and_structured_output.ipynb`](notebooks/level_2_tool_calling_and_structured_output.ipynb) | **ready** — verified end to end against the real API on 2026-10-14 |
 | 3 · Memory and retrieval | [`level_3_memory_and_retrieval.ipynb`](notebooks/level_3_memory_and_retrieval.ipynb) | **ready** — verified end to end against the real API on 2026-10-14 |
-| 4 · MCP, A2A and Skills | [`level_4_mcp_a2a_and_skills.ipynb`](notebooks/level_4_mcp_a2a_and_skills.ipynb) | **ready** — verified end to end against the real API on 2026-10-14 |
+| 4 · MCP, A2A and Skills | [`level_4_mcp_a2a_and_skills.ipynb`](notebooks/level_4_mcp_a2a_and_skills.ipynb) | **ready** — verified end to end against the real API on 2026-10-15 |
 | 5 · Evals and tracing | [`level_5_evals_and_tracing.ipynb`](notebooks/level_5_evals_and_tracing.ipynb) | **ready** — verified end to end against the real API on 2026-10-14 |
 | 6 · Attack and harden | [`level_6_attack_and_harden.ipynb`](notebooks/level_6_attack_and_harden.ipynb) | **ready** — verified end to end against the real API on 2026-10-14 |
 
@@ -50,7 +50,7 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
   | 6 | 0.01 USD | about 2 min | 5160 |
 
   Most of Level 1's cost is the long-context experiment in Part 7; lower `N_LINES` or `TRIALS_LONG` there to make it cheaper.
-  Every notebook runs its own toy gateway inside the kernel (Level 4 also two MCP servers and three A2A agents), each level on
+  Every notebook runs its own toy gateway inside the kernel (Level 4 also two MCP servers and seven A2A servers), each level on
   its own ports, so two levels can run side by side. The last cell of every notebook stops what it started and prints what
   your run cost.
 - **The optional LiteLLM section of Level 1 (Part 3)** starts a real LiteLLM gateway with
@@ -66,7 +66,7 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
 - Run a notebook **top to bottom**; later parts reuse functions and the gateway log from earlier parts.
   To run it again, use *Kernel → Restart Kernel and Run All Cells*.
 - The notebooks come **with the outputs of the author's run** against the real API (one full run per level: Level 1 on
-  2026-10-13, Levels 2 and 4–6 on 2026-10-14, Level 3 on 2026-10-15), so you can read them — answers, tables and charts — without running them, on
+  2026-10-13, Levels 2, 5 and 6 on 2026-10-14, Levels 3 and 4 on 2026-10-15), so you can read them — answers, tables and charts — without running them, on
   GitHub or in Jupyter. Every printed value says what it is: a label before a short value, a `=== title ===` header above
   a block or a table. When you run one yourself the numbers will differ a little, because the model samples and prices
   change; the text says "when we ran it" wherever it quotes a measured result, and the arguments never depend on an exact
@@ -140,10 +140,9 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
 | 0 · Setup | the gateway, the bank and the agent loop from Level 2, and a window into every request |
 | 1 · Why protocols | three boundaries — another team's tools, another team's agent, procedures kept in files — and why a standard turns N × M pieces of glue into N + M |
 | 2 · MCP | our tools as an MCP server; the protocol by hand over HTTP, and a tool error vs a protocol error; one changed sentence in a server's tool description that books a refund a hundred times too large, and how to catch it; resources and prompts; LangChain's `MCPAdapter` and Agno's `MCPTools`; an async tool called from sync code |
-| 3 · A2A | another team's agent called by hand; a card that promises too much; the A2A SDK around a LangGraph agent; Agno's AgentOS; an Agno client that silently drops the SDK server's answer; who pays for which call |
-| 4 · Skills | an agent that does not know the procedure; a catalog in the prompt and the steps on demand; a look-alike skill; the same in LangChain + LangGraph; Agno's built-in skills measured against our version |
-| 5 · Putting it together | one request that uses an MCP tool, the lending agent and a skill; which one to choose when |
-| 6 · Recap | the one idea once more, glossary, clean up |
+| 3 · A2A | another team's agent in the official A2A SDK; both shapes of an answer, `kind: message` and `kind: task` (with an artifact, and as a stream); the remote agent as one more tool; a card that promises too much; a LangGraph agent in the SDK and Agno's AgentOS; an Agno client that silently drops the SDK server's answer; a conversation per `contextId`; a remote agent that asks back (`input-required`); who pays for which call |
+| 4 · Skills | skills in the official format (Agent Skills), in the folder `level_4_skills/` next to the notebook: a `SKILL.md` and a script; an agent that does not know the procedure; a catalog in the prompt and the steps on demand; when a skill's script runs, and the tool that runs it; a look-alike skill and approved names; the same in LangChain + LangGraph; Agno's built-in skills measured against our version |
+| 5 · Recap | the one idea once more, glossary, clean up |
 
 ## Level 5 at a glance
 
@@ -176,7 +175,7 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
 
 ```
 notebooks/                 the notebooks (with the author's outputs), level_N_helpers.py (the functions Levels 2–6
-                           import) and img/ with their diagrams
+                           import), img/ with their diagrams, and level_4_skills/ (the skills Level 4 reads)
 pyproject.toml, uv.lock    the pinned environment the notebooks were verified with; .python-version pins Python 3.12
 .env.example               template for your .env
 ```
