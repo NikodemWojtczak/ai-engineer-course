@@ -45,7 +45,7 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
   | 1 | 0.30–0.50 USD | about 3 min | 4010, and 4020 for the optional LiteLLM section |
   | 2 | 0.02 USD | under 2 min | 5120 |
   | 3 | 0.02 USD | about 2 min | 5130 |
-  | 4 | 0.03 USD | about 1 min | 5140–5149 |
+  | 4 | 0.04 USD | about 1.5 min | 5140–5149 |
   | 5 | 0.12 USD | about 4 min | 5150 |
   | 6 | 0.01 USD | about 2 min | 5160 |
 
@@ -141,7 +141,7 @@ Prefer VS Code? Open the folder, pick the `.venv` kernel and run the notebook th
 | 1 · Why protocols | three boundaries — another team's tools, another team's agent, procedures kept in files — and why a standard turns N × M pieces of glue into N + M |
 | 2 · MCP | our tools as an MCP server; the protocol by hand over HTTP, and a tool error vs a protocol error; one changed sentence in a server's tool description that books a refund a hundred times too large, and how to catch it; resources and prompts; LangChain's `MCPAdapter` and Agno's `MCPTools`; an async tool called from sync code |
 | 3 · A2A | another team's agent in the official A2A SDK; both shapes of an answer, `kind: message` and `kind: task` (with an artifact, and as a stream); the remote agent as one more tool; a card that promises too much; a LangGraph agent in the SDK and Agno's AgentOS; an Agno client that silently drops the SDK server's answer; a conversation per `contextId`; a remote agent that asks back (`input-required`); who pays for which call |
-| 4 · Skills | skills in the official format (Agent Skills), in the folder `level_4_skills/` next to the notebook: a `SKILL.md` and a script; an agent that does not know the procedure; a catalog in the prompt and the steps on demand; when a skill's script runs, and the tool that runs it; a look-alike skill and approved names; the same in LangChain + LangGraph; Agno's built-in skills measured against our version |
+| 4 · Skills | skills in the official format (Agent Skills), in the folder `level_4_skills/` next to the notebook: a `SKILL.md`, a script and a reference file; an agent that does not know the procedure; a catalog in the prompt and the steps on demand; when a skill's script runs, and the tool that runs it; a reference file that the steps send the model to; a look-alike skill and approved names; the same in LangChain + LangGraph; Agno's built-in skills measured against our version |
 | 5 · Recap | the one idea once more, glossary, clean up |
 
 ## Level 5 at a glance
